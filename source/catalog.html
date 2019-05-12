@@ -15,16 +15,16 @@
 <body>
   <header class="header">
     <nav class="navigation">
+      <div class="navigation__logo">
+        <a href="index.html" class="logo logo--main" aria-label="логотип магазина catenergy"></a>
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
       <ul class="navigation__list">
-        <li class="navigation__item navigation__item--logo">
-          <a href="index.html" class="logo logo--main" aria-label="логотип магазина catenergy"></a>
-          <button class="navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </li>
-        <li class="navigation__item">Главная</li>
-        <li class="navigation__item">Каталог продукции</li>
-        <li class="navigation__item">Выбор программы</li>
+        <li class="navigation__item"><a href="" class="navigation__link">Главная</a></li>
+        <li class="navigation__item"><a href="" class="navigation__link">Каталог продукции</a>К</li>
+        <li class="navigation__item"><a href="" class="navigation__link">Выбор программы</a></li>
       </ul>
     </nav>
   </header>
@@ -51,7 +51,7 @@
               <td>700 Р.</td>
             </tr>
           </table>
-          <button class="button">Заказать</button>
+          <a href="#" class="button">Заказать</a>
         </article>
         <article class="card">
           <img src="#" alt="Cat Energy PRO 100г." class="card__image">
@@ -70,7 +70,7 @@
               <td>1000 Р.</td>
             </tr>
           </table>
-          <button class="button">Заказать</button>
+          <a href="#" class="button">Заказать</a>
         </article>
         <article class="card">
           <img src="#" alt="Cat Energy PRO 500г." class="card__image">
@@ -89,7 +89,7 @@
               <td>700 Р.</td>
             </tr>
           </table>
-          <button class="button">Заказать</button>
+          <a href="#" class="button">Заказать</a>
         </article>
         <article class="card">
           <img src="#" alt="Cat Energy PRO 1000г." class="card__image">
@@ -108,7 +108,7 @@
               <td>1000 Р.</td>
             </tr>
           </table>
-          <button class="button">Заказать</button>
+          <a href="#" class="button">Заказать</a>
         </article>
         <article class="card">
           <img src="#" alt="Cat Energy Slim 500г." class="card__image">
@@ -127,7 +127,7 @@
               <td>400 Р.</td>
             </tr>
           </table>
-          <button class="button">Заказать</button>
+          <a href="#" class="button">Заказать</a>
         </article>
         <article class="card">
           <img src="#" alt="Cat Energy Slim 1000г." class="card__image">
@@ -146,7 +146,7 @@
               <td>700 Р.</td>
             </tr>
           </table>
-          <button class="button">Заказать</button>
+          <a href="#" class="button">Заказать</a>
         </article>
         <article class="card">
           <img src="#" alt="Cat Energy Slim 500г." class="card__image">
@@ -165,7 +165,7 @@
               <td>500 Р.</td>
             </tr>
           </table>
-          <button class="button">Заказать</button>
+          <a href="#" class="button">Заказать</a>
         </article>
         <div class="cards__more">
           <button class="cards__button" aria-label="показать еще 100500 товаров">+</button>
@@ -177,7 +177,7 @@
     </section>
     <section class="additional">
       <h2 class="title title--mini">Дополнительные товары</h2>
-      <article class="card card__extra">
+      <article class="card card--extra">
         <h2 class="card__title">Сахарозаменитель</h2>
         <table class="card__table card__table--extra">
           <tr>
@@ -185,9 +185,9 @@
             <td>200 Р.</td>
           </tr>
         </table>
-        <button class="button">Заказать</button>
+        <a href="#" class="button">Заказать</a>
       </article>
-      <article class="card card__extra">
+      <article class="card card--extra">
         <h2 class="card__title">Питьевая вода</h2>
         <table class="card__table card__table--extra">
           <tr>
@@ -195,9 +195,9 @@
             <td>50 Р.</td>
           </tr>
         </table>
-        <button class="button">Заказать</button>
+        <a href="#" class="button">Заказать</a>
       </article>
-      <article class="card card__extra">
+      <article class="card card--extra">
         <h2 class="card__title">Молоко</h2>
         <table class="card__table card__table--extra">
           <tr>
@@ -205,9 +205,9 @@
             <td>100 Р.</td>
           </tr>
         </table>
-        <button class="button">Заказать</button>
+        <a href="#" class="button">Заказать</a>
       </article>
-      <article class="card card__extra">
+      <article class="card card--extra">
         <h2 class="card__title">Витамины</h2>
         <table class="card__table card__table--extra">
           <tr>
@@ -215,7 +215,7 @@
             <td>300 Р.</td>
           </tr>
         </table>
-        <button class="button">Заказать</button>
+        <a href="#" class="button">Заказать</a>
       </article>
       <div class="promo">
         <p>Закажите все
@@ -236,18 +236,16 @@
   </main>
 
   <footer class="footer">
-    <ul class="footer__list">
-      <li class="footer__item"><a href="index.html" class="logo logo--bottom"></a></li>
-      <li class="footer__item">
-        <ul class="social">
-          <li class="social__item"><a href="#" class="social__link" aria-label="catenergy вконтакте"></a></li>
-          <li class="social__item"><a href="#" class="social__link" aria-label="catenergy инстаграм"></a></li>
-          <li class="social__item"><a href="#" class="social__link" aria-label="catenergy фейсбук"></a></li>
-        </ul>
-      </li>
-      <li class="footer__item">
+    <div class="footer__wrapper">
+      <div class="footer__logo"><a class="logo logo--bottom"></a></div>
+      <ul class="social">
+        <li class="social__item"><a href="#" class="social__link" aria-label="catenergy вконтакте"></a></li>
+        <li class="social__item"><a href="#" class="social__link" aria-label="catenergy инстаграм"></a></li>
+        <li class="social__item"><a href="#" class="social__link" aria-label="catenergy фейсбук"></a></li>
+      </ul>
+      <div class="footer__developer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link"
-          aria-label="ссылка на сайт разработчика"><b>HTML Academy</b></a>
-      </li>
-    </ul>
+          aria-label="ссылка на сайт разработчика">HTML Academy</a>
+      </div>
+    </div>
   </footer>
