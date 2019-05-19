@@ -1,0 +1,11 @@
+.additional__wrapper {
+  position: relative;
+
+  margin: 0 auto;
+  width: $mobile-width;
+  padding: 0 $mobile-padding;
+
+  &::before {
+    @include green-border;
+  }
+}

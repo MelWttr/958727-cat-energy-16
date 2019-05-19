@@ -1,0 +1,112 @@
+.form__wrapper {
+  margin: 0 auto;
+  width: $mobile-width
+}
+
+.form__text {
+  @include title-small(16px, 1.25, $darkest);
+  margin-bottom: 23px;
+  padding: 0 $mobile-padding;
+}
+
+.form__item {
+  position: relative;
+  padding: 0 $mobile-padding 23px;
+
+  border: none;
+
+  &--type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: $mobile-padding;
+
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+  }
+&:not(.form__item--type):not(.form__item--data)::before {
+    @include green-border;
+  }
+}
+
+.form__label {
+  @include title-small (16px, 1.13);
+
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+
+  &--mail {
+    margin-top: -7px;
+  }
+
+  &--phone {
+    margin-top: -10px;
+  }
+}
+
+.form__field:active + .form__icon,
+.form__field:focus + .form__icon {
+  fill: $green;
+}
+
+.form__field {
+  flex-grow: 1;
+  margin-left: 15px;
+  padding: 15px;
+
+  border: 1px solid rgba($color: $border-color, $alpha: 0.3);
+
+  &::placeholder {
+    @include title-small (16px, 1.13, $brown);
+  }
+
+  &:hover {
+    border-color: rgba($color: $border-color, $alpha: 0.5)
+  }
+
+  &:active,
+  &:focus {
+    padding: 14px;
+    border: 2px solid $brown;
+    outline: none;
+  }
+
+  &--message {
+    margin-left: 0;
+    padding: 15px 12px;
+    width: 100%;
+    min-height: 150px;
+  }
+
+  &--message:active,
+  &--message:focus {
+   padding: 14px 11px;
+  }
+}
+
+.form .button {
+  width: 280px;
+  margin: 0 auto;
+  border: none;
+}
+
+.form__warning {
+  margin: 20px 0 34px;
+  padding: 0 $mobile-padding;
+
+  text-align: center;
+}

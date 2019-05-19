@@ -1,0 +1,47 @@
+@mixin list-reducer {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin title($size, $height, $color: $darkest) {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Oswald-Regular", "Arial", sans-serif;
+  font-size: $size;
+  font-weight: normal;
+  font-style: normal;
+  line-height: $height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin title-small($size, $height, $color: $dark) {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Oswald-Regular", "Arial", sans-serif;
+  font-size: $size;
+  font-weight: normal;
+  font-style: normal;
+  line-height: $height;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin green-border ($top: 42px, $color: $green) {
+  content: "";
+
+    position: absolute;
+    top: $top;
+    right: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: $color;
+}

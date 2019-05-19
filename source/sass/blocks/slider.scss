@@ -1,0 +1,46 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.slider__slide {
+  margin: 0 auto;
+  margin-top: 38px;
+  margin-bottom: 30px;
+}
+
+.slider__radio {
+  @include title-small(16px, 1.25, $darkest);
+
+  margin: 0 20px;
+
+  cursor: pointer;
+}
+
+.slider__switcher{
+  &--before:checked ~ .slider__slide--before {
+    display: block;
+  }
+
+  &--before:checked ~ .slider__slide--after {
+    display: none;
+  }
+
+  &--before:checked ~ .switcher .switcher__scale {
+    left: 6px;
+  }
+
+  &--after:checked ~ .slider__slide--after {
+    display: block;
+  }
+
+  &--after:checked ~ .slider__slide--before {
+    display: none;
+  }
+
+  &--after:checked ~ .switcher .switcher__scale {
+    right: 6px;
+  }
+}

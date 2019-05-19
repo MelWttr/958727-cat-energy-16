@@ -1,0 +1,47 @@
+.main__wrapper{
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 $mobile-padding;
+
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+  background-size: 320px 305px;
+
+  @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("..img/index-background-mobile@2x.jpg");
+      background-size: 320px 305px;
+      }
+}
+
+.main__container {
+  margin: 0 auto;
+  width: $mobile-width;
+}
+
+.main__title{
+  @include title(36px, 1, #ffffff);
+
+  padding-top: 27px;
+
+  text-align: center;
+}
+
+.main__slogan{
+  @include title-small(14px, 1, #ffffff);
+
+  margin-top: 19px;
+
+  text-align: center;
+}
+
+.main__picture{
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 280px;
+  height: 270px;;
+}
+
+.main__wrapper .button{
+  font-size: 14px;
+  line-height: 1.29;
+}
