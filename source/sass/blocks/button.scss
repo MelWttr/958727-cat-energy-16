@@ -1,0 +1,25 @@
+.button{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Oswald-Regular", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.25;
+    text-align: center;
+    text-transform: uppercase;
+    color: $brown;
+
+    background-color: $gray;
+    cursor: pointer;
+
+  &--green {
+    color: #ffffff;
+
+    background-color: $green;
+  }
+
+}

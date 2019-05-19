@@ -1,0 +1,25 @@
+.switcher {
+  display: inline-block;
+}
+
+.switcher__controller{
+  position: relative;
+
+  width: 85px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+}
+
+.switcher__scale{
+  position: absolute;
+  top: 3px;
+
+  width: 35px;
+  height: 6px;
+
+  background-color: $green;
+  border-radius: 3px;
+}

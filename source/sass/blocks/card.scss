@@ -1,0 +1,95 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 0 $mobile-padding;
+  border-top: 1px solid  $gray;
+
+  &--more {
+    flex-direction: column;
+
+    border-bottom: 1px solid  $gray;
+  }
+
+  &--extra:last-of-type {
+    border-bottom: 1px solid  $gray;
+  }
+}
+
+.card__title {
+  @include title-small(16px, 1.25, $darkest);
+  padding-right: 40%;
+
+  &--more {
+    padding: 0;
+  }
+
+  &--extra {
+    margin-top: 12px;
+  }
+}
+
+.card__info {
+  width: 50%;
+}
+
+.card .button {
+  width: 100%;
+  margin: 0 0 25px;
+}
+
+.card--more .button {
+  margin-top: 23px;
+}
+
+.card--extra .button {
+  margin-top: 10px;
+}
+
+.card__table {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.card__table th {
+  text-align: left;
+}
+
+.card__table td {
+  text-align: right;
+}
+
+.card__text {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.33;
+  color: $brown;
+
+  &--more {
+    margin-top: 7px;
+  }
+}
+
+.card__text th {
+  font-weight: normal;
+}
+
+.card__plus-button {
+  position: relative;
+
+  margin: 25px auto;
+  width: 31px;
+  height: 31px;
+
+  border: none;
+  background: url("../img/icon-plus.svg") no-repeat;
+  background-size: 31px 31px;
+
+  opacity: 0.2;
+  cursor: pointer;
+}

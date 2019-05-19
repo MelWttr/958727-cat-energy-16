@@ -1,0 +1,21 @@
+.title {
+  &--maxi {
+    @include title(36px, 1.67);
+
+    padding: 30px $mobile-padding 35px;
+  }
+
+  &--mini {
+    @include title(24px, 1);
+
+    z-index: 2;
+    display: inline-block;
+
+    margin: 0 auto;
+    margin-left: -$mobile-padding;
+    padding: 30px $mobile-padding;
+    max-width: 225px;
+
+    background-color: #ffffff;
+  }
+}
