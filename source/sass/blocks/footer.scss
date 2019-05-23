@@ -25,6 +25,8 @@
   justify-content: space-between;
   align-items: center;
 
+  font-size: 16px;
+  line-height: 1;
   color: $brown;
 
   &:active {
@@ -50,11 +52,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 $tablet-padding;
+    padding: 15px $tablet-padding 0;
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .footer__wrapper {
     @include desktop-wrapper;
   }

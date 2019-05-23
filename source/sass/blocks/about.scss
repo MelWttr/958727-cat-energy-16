@@ -73,11 +73,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 50px;
   }
 
   .about__item {
-    margin: 0;
-    padding: 100px 0 100px 0;
+    margin: 20px 60px 60px 0;
+    padding: 100px 0 45px 0;
     width: 245px;
 
     &::before {
@@ -122,6 +123,8 @@
   }
 
   .about__text {
+    margin: 15px 0 0;
+
     font-size: 16px;
     line-height: 1.5;
   }
