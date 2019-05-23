@@ -19,3 +19,14 @@
     background-color: #ffffff;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    &--maxi {
+      padding: 50px $tablet-padding 60px;
+
+      font-size: 60px;
+      line-height: 1;
+    }
+  }
+}

@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: $mobile-width;
+  min-width: $mobile-width;
   padding: 0 $mobile-padding;
 }
 
@@ -26,8 +26,36 @@
   align-items: center;
 
   color: $brown;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__link:hover svg,
+.footer__link:active svg {
+  fill: $green;
 }
 
 .footer__icon {
   fill: $brownish-gray;
+
+  &--academy {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $tablet-padding;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    @include desktop-wrapper;
+  }
 }

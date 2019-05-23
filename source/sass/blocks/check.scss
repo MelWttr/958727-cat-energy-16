@@ -13,6 +13,14 @@
   margin-top: 45px;
 
   cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.check__label:hover .check__box {
+  border-color: $deep-gray;
 }
 
 .check__box {
@@ -43,14 +51,6 @@
     border-bottom: 2px solid $green;
 
     transform: rotate(-45deg);
-  }
-
-  &:hover {
-    border-color: $green;
-  }
-
-  &:active {
-    border-color: rgba($color: $brown, $alpha: 0.3);
   }
 }
 

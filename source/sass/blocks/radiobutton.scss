@@ -6,7 +6,19 @@
   padding-left: calc(16px + 30px);
 
   cursor: pointer;
+
+  &:active {
+    opacity: 0.5;
+  }
 }
+
+.radiobutton:hover .radiobutton__icon {
+    border-color: rgba($color: $border-color, $alpha: 1);
+}
+
+.radiobutton:active .radiobutton__icon {
+    opacity: 0.3;
+  }
 
 .radiobutton__icon {
   position: absolute;
@@ -36,13 +48,6 @@
 
     background-color: $green;
     border-radius: 50%;
-  }
-  &:hover {
-    border-color: rgba($color: $border-color, $alpha: 1);
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 

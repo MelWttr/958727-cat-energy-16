@@ -1,9 +1,11 @@
-.example__wrapper {
-  margin: 0 auto;
-  width: $mobile-width;
-  padding: 0 $mobile-padding 33px;
-
+.example{
   background-color: $gray;
+}
+
+.example__data {
+  margin: 0 auto;
+  min-width: $mobile-width;
+  padding: 0 $mobile-padding 33px;
 }
 
 .example__text {
@@ -63,4 +65,132 @@
   text-align: center;
 }
 
+.example__panel {
+  text-align: center;
+  width: 100%;
+}
 
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: #ffffff;
+  }
+
+  .example__wrapper {
+    margin: 0 auto;
+  }
+
+  .example__data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0 $tablet-padding;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .example__table {
+    margin: 50px 0;
+  }
+
+  .example__info {
+    margin: 0;
+    width: 180px;
+
+    font-size: 20px;
+    line-height: 1;
+    text-align: right;
+  }
+
+  .example__result {
+    width: 162px;
+
+    font-size: 30px;
+    line-height: 1.23;
+
+    &:not(:first-of-type){
+      margin-left: 40px;
+    }
+  }
+
+  .example__description {
+    margin: -10px 10px 0;
+    width: 142px;
+
+    font-size: 14px;
+    line-height: 1;
+    color: $brown;
+
+    background-color: #ffffff;
+  }
+
+  .example__panel {
+    margin: 0 auto;
+    margin-top: -180px;
+
+    z-index: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    position: relative;
+
+    background-color: $gray;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+      width: 50%;
+      background-color: #eaeaea;
+    }
+  }
+
+  .example__wrapper {
+    @include desktop-wrapper;
+
+    position: relative;
+
+    margin-top: 200px;
+  }
+
+  .example__data {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 70px;
+    width: 50%;
+  }
+
+  .example__data .title {
+    margin-top: -200px;
+    padding: 0;
+  }
+
+  .example__description {
+    background-color: $gray;
+  }
+
+  .example__text {
+    margin-top: 200px;
+    width: 430px;
+  }
+
+  .example__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 325px;
+  }
+}

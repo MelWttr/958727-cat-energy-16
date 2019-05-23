@@ -1,7 +1,7 @@
 .about__wrapper {
  margin: 0 auto;
  padding: 0 $mobile-padding;
- width: $mobile-width;
+ min-width: $mobile-width;
 }
 
 .about__list{
@@ -35,24 +35,24 @@
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
     background-image: url("../img/sprite-png-2x.png");
-    background-size: 201px 50px;
+    background-size: 260px 50px;
     }
   }
 
   &:first-of-type::before {
-    background-position: 5px 5px;
+    background-position: -133px 5px;
   }
 
   &:nth-of-type(2)::before{
-    background-position: -47px 5px;
+    background-position: -204px 5px;
   }
 
   &:nth-of-type(3)::before{
-    background-position: -96px 5px;
+    background-position: -67px 5px;
   }
 
   &:nth-of-type(4)::before{
-    background-position: -146px 5px;
+    background-position: 5px 5px;
   }
 
 }
@@ -62,3 +62,74 @@
   line-height: 1.29;
 }
 
+@media (min-width: $tablet-width) {
+  .about__wrapper {
+    padding: 0 $tablet-padding;
+
+    border-bottom: 1px solid $border-color;
+  }
+
+  .about__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .about__item {
+    margin: 0;
+    padding: 100px 0 100px 0;
+    width: 245px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &:first-of-type::before {
+      background-position: -130px 12px;
+    }
+
+    &:nth-of-type(2)::before{
+      background-position: -205px 12px;
+    }
+
+    &:nth-of-type(3)::before{
+      background-position: -57px 12px;
+    }
+
+    &:nth-of-type(4)::before{
+      background-position: 15px 15px;
+    }
+
+    @for $i from 1 through 4 {
+      &--#{$i}::after {
+        content: "#{$i}";
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+
+        font-family: "Oswald-Regular", "Arial", sans-serif;
+        font-size: 281px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 0.74;
+        color: #f2f2f2;
+      }
+    }
+  }
+
+  .about__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__wrapper {
+    @include desktop-wrapper;
+    border: none;
+  }
+}

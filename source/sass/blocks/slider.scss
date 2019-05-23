@@ -9,6 +9,10 @@
   margin: 0 auto;
   margin-top: 38px;
   margin-bottom: 30px;
+
+  &--after {
+    display: none;
+  }
 }
 
 .slider__radio {
@@ -42,5 +46,114 @@
 
   &--after:checked ~ .switcher .switcher__scale {
     right: 6px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    width: 100%;
+  }
+
+  .slider__wrapper {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 150px;
+    padding-top: 462px;
+    width: 100%;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 50%;
+      background-color: $gray;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+      width: 51%;
+      background-color: #eaeaea;
+    }
+  }
+
+  .slider__slide {
+    position: absolute;
+    bottom: 90px;
+    z-index: 1;
+
+    &--before {
+      clip: rect(auto, 338px, auto, 0);
+    }
+
+    &--after {
+      display: block;
+      clip: rect(auto, auto, auto, 338px);
+    }
+  }
+  .slider__radio {
+    padding-bottom: 2px;
+    border-bottom: 1px dotted $border-color;
+    z-index: 5;
+
+    &:hover {
+      border-bottom: 1px solid $border-color;
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+
+  .slider__switcher{
+    &--before:checked ~ .slider__wrapper .slider__slide--before {
+      clip: rect(auto auto auto auto);
+    }
+
+    &--before:checked ~ .slider__wrapper::before {
+      width: 100%;
+      z-index: 1;
+    }
+
+    &--before:checked ~ .slider__wrapper .slider__slide--after {
+      display: none;
+    }
+
+    &--after:checked ~ .slider__wrapper .slider__slide--after {
+      clip: rect(auto auto auto auto);
+    }
+
+    &--after:checked ~ .slider__wrapper::after {
+      width: 100%;
+    }
+
+    &--after:checked ~ .slider__wrapper .slider__slide--before {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-top: -150px;
+    width: 50%;
   }
 }

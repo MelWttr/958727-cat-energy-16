@@ -18,4 +18,36 @@
 
 .social__link svg {
   fill: $brownish-gray;
+
+  &:hover {
+    fill: $green;
+  }
+
+  &:active {
+    fill: $green;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    border: none;
+  }
+
+  .social__icon {
+    &--fb {
+      width: 14px;
+      height: 40px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+  }
 }
