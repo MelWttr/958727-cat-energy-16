@@ -1,6 +1,14 @@
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .header{
-    &::before {
+    padding-top: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding-top: 53px;
+
+    &--background::before {
       content: "";
 
       position: absolute;

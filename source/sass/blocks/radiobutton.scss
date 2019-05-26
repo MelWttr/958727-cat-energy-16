@@ -2,7 +2,7 @@
   @include title-small(16px, 1.13);
   position: relative;
 
-  margin-top: 29px;
+  margin-top: 24px;
   padding-left: calc(16px + 30px);
 
   cursor: pointer;
@@ -61,26 +61,38 @@
   }
 }
 
-// @media (min-width: $tablet-width) {
-//   .radiobutton {
-//     @include title(19px, 0.95);
-//     margin: 0;
-//     padding-left: 85px;
+@media (min-width: $tablet-width) {
+  .radiobutton {
+    margin-top: 30px;
+    padding-left: 60px;
 
-//     &:not(:first-of-type) {
-//       margin-top: 55px;
-//     }
-//   }
+    font-size: 20px;
+    line-height: 1;
 
-//   .radiobutton__icon {
-//     width: 52px;
-//     height: 52px;
+    &:last-of-type {
+      padding-bottom: 10px;
+    }
+  }
 
-//     &::before {
-//       width: 22px;
-//       height: 22px;
-//       margin-top: -11px;
-//       margin-left: -11px;
-//     }
-//   }
-// }
+  .radiobutton__icon {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      margin-top: -9px;
+      margin-left: -9px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .radiobutton {
+    margin-top: 30px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+}

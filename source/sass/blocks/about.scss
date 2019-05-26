@@ -1,11 +1,13 @@
 .about__wrapper {
  margin: 0 auto;
- padding: 0 $mobile-padding;
+ padding: 25px $mobile-padding 0;
  min-width: $mobile-width;
 }
 
 .about__list{
   @include list-reducer;
+
+  padding: 20px 0 25px;
 }
 
 .about__item {
@@ -14,7 +16,7 @@
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-left: 80px;
   min-height: 60px;
 
@@ -73,6 +75,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 0;
     margin-top: 50px;
   }
 

@@ -1,7 +1,7 @@
 .main {
   position: relative;
 
-  &::before {
+  &--background::before {
     content: "";
 
     position: absolute;
@@ -38,6 +38,7 @@
 .main__container {
   margin: 0 auto;
   min-width: $mobile-width;
+  padding: 18px $mobile-padding 0;
 }
 
 .main__title{
@@ -52,7 +53,7 @@
 .main__slogan{
   @include title-small(14px, 1, #ffffff);
 
-  margin-top: 19px;
+  margin: 0;
 
   text-align: center;
 }
@@ -62,6 +63,10 @@
   margin-top: 25px;
   width: 280px;
   height: 270px;;
+}
+
+.main .button {
+  margin-top: 5px;
 }
 
 @media (min-width: $tablet-width) {
@@ -80,6 +85,10 @@
     flex-direction: column;
 
     background: none;
+  }
+
+  .main__container {
+    padding: 0 $tablet-padding;
   }
 
   .main__title {
@@ -127,6 +136,11 @@
     margin: 0 auto;
     padding-right: 650px;
     max-width: 1300px;
+  }
+
+  .main__container {
+    width: 1300px;
+    padding: 0 $desktop-padding;
   }
 
   .main__title,

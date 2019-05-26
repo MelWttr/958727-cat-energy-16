@@ -13,8 +13,12 @@
     border-bottom: 1px solid  $gray;
   }
 
+  &--extra {
+    padding: 0;
+  }
+
   &--extra:last-of-type {
-    border-bottom: 1px solid  $gray;
+    border-bottom: 1px solid  $border-color;
   }
 }
 
@@ -37,7 +41,10 @@
 
 .card .button {
   width: 100%;
-  margin: 0 0 25px;
+  margin: 0 0 20px;
+
+  font-size: 16px;
+  line-height: 1.25
 }
 
 .card--more .button {
@@ -45,8 +52,9 @@
 }
 
 .card--extra .button {
-  margin-top: 10px;
+  margin-top: 7px;
 }
+
 
 .card__table {
   margin-top: 10px;
@@ -87,9 +95,194 @@
   height: 31px;
 
   border: none;
-  background: url("../img/icon-plus.svg") no-repeat;
+  background: url("../img/icon-plus-mobile.svg") no-repeat;
   background-size: 31px 31px;
 
   opacity: 0.2;
   cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .card {
+    margin-top: 135px;
+    padding: 0 0 40px;
+    width: 324px;
+
+    background-color: $gray;
+
+    &--more {
+      background: none;
+      border: 1px solid $border-color;
+    }
+
+    &--extra {
+      margin: 0;
+      padding: 20px $tablet-padding 26px;
+      width: 100%;
+
+      background-color: transparent;
+      border: 1px solid $border-color;
+      border-top: none;
+    }
+
+    &--extra:first-of-type {
+      margin-top: 65px;
+
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  .card__info {
+    padding: 0 $tablet-padding;
+  }
+
+  .card__table {
+    margin-top: 18px;
+
+    &--extra {
+      margin: 0;
+      width: auto;
+    }
+
+    &--extra .card__text {
+    border: none;
+  }
+
+  &--extra th {
+    margin-right: 52px;
+  }
+}
+
+  .card .button {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 250px;
+    height: 40px;
+
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .card--extra .button {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .card__image {
+    width: 324px;
+    height: 172px;
+    margin-top: -35px;
+
+    background-color: transparent;
+  }
+
+  .card:nth-child(even) .card__image {
+      height: 208px;
+      margin-top: -70px;
+  }
+
+  .card__info {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card__title {
+    margin-top: 25px;
+    padding: 0 20%;
+    text-align: center;
+
+    font-size: 20px;
+    line-height: 1;
+
+    &--extra {
+      padding: 0;
+      margin: 0;
+    }
+
+    &--more {
+      margin-top: 20px;
+      padding: 0;
+      width: 135px;
+    }
+  }
+
+  .card__text {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+
+    font-size: 16px;
+    line-height: 1;
+
+    border-bottom: 1px solid $border-color;
+
+    &--more {
+      margin: 0;
+      margin-bottom: 35px;
+      padding: 0;
+      width: 170px;
+
+      text-align: center;
+      border: none;
+    }
+  }
+
+  .card__plus-button {
+    margin: 55px auto 0;
+    width: 61px;
+    height: 61px;
+
+    background: url("../img/icon-plus.svg") no-repeat;
+    background-size: 61px 61px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card {
+    width: 245px;
+
+    &--extra {
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      width: 100%;
+
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  .card__image {
+    width: 245px;
+  }
+
+  .card__title {
+    padding: 0 10%;
+
+    &--more {
+      padding: 0;
+    }
+
+    &--extra {
+      padding: 0;
+      width: 285px;
+
+      text-align: left;
+    }
+  }
+
+  .card__table {
+    &--extra{
+      width: 285px;
+    }
+  }
+
+  .card .button {
+    width: 169px;
+  }
+
+  .card--extra .button {
+    width: 245px;
+    margin: 0;
+  }
 }

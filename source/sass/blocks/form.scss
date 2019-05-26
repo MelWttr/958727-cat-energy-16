@@ -1,19 +1,33 @@
 .form__wrapper {
-  margin: 0 auto;
-  width: $mobile-width
+  margin: 20px auto 0;
+  min-width: $mobile-width
+}
+
+.form__title {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -$mobile-padding;
+  padding-bottom: 20px;
+  max-width: 222px;
 }
 
 .form__text {
-  @include title-small(16px, 1.25, $darkest);
-  margin-bottom: 23px;
+  @include title-small(14px, 1.29, $darkest);
+  margin-bottom: 30px;
   padding: 0 $mobile-padding;
+
+  text-align: left;
 }
 
 .form__item {
   position: relative;
-  padding: 0 $mobile-padding 23px;
+  padding: 0 $mobile-padding;
 
   border: none;
+
+  &--data {
+    padding-bottom: 23px;
+  }
 
   &--type {
     display: flex;
@@ -21,10 +35,10 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    padding: $mobile-padding;
+    padding-bottom: 30px;
 
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
+    border-top: 1px solid rgba($color: $border-color, $alpha: 0.5);
+    border-bottom: 1px solid rgba($color: $border-color, $alpha: 0.5);
 
   }
 &:not(.form__item--type):not(.form__item--data)::before {
@@ -40,7 +54,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -66,41 +80,41 @@
 .form__field {
   flex-grow: 1;
   margin-left: 15px;
-  padding: 15px;
+  padding: 14px;
 
-  border: 1px solid rgba($color: $border-color, $alpha: 0.3);
+  border: 1px solid rgba($color: $border-color, $alpha: 0.5);
 
   &::placeholder {
     @include title-small (16px, 1.13, $brown);
   }
 
   &:hover {
-    border-color: rgba($color: $border-color, $alpha: 0.5)
+    border-color: rgba($color: $border-color, $alpha: 1)
   }
 
   &:active,
   &:focus {
-    padding: 14px;
+    padding: 13px;
     border: 2px solid $brown;
     outline: none;
   }
 
   &--message {
     margin-left: 0;
-    padding: 15px 12px;
+    padding: 15px 11px;
     width: 100%;
     min-height: 150px;
   }
 
   &--message:active,
   &--message:focus {
-   padding: 14px 11px;
+   padding: 14px 10px;
   }
 }
 
 .form .button {
   width: 280px;
-  margin: 0 auto;
+  margin: 33px auto 0;
   border: none;
 }
 
@@ -109,4 +123,166 @@
   padding: 0 $mobile-padding;
 
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form__text {
+    margin: 55px 0 0;
+    padding: 0 70px;
+    width: 470px;
+
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .form__item {
+    margin-top: 55px;
+    padding: 0 30px;
+
+    &--data {
+      margin-top: 50px;
+      padding: 0 70px;
+    }
+
+    &--type {
+      margin: 70px 70px 0 70px;
+      padding: 12px 28px 25px;
+
+      border: 1px solid rgba($color: $border-color, $alpha: 0.5);
+    }
+
+    &--comment {
+      margin-top: 45px;
+    }
+  }
+
+  .form__profile {
+    &--owner {
+      padding: 0 40px;
+    }
+  }
+
+  .form__label {
+    margin-top: 18px;
+
+    font-size: 20px;
+    line-height: 1;
+
+    &--message  {
+      padding: 0 40px;
+    }
+  }
+
+  .form__icon {
+    right: 55px;
+  }
+
+  .form__title {
+    margin: 0;
+    padding-bottom: 70px;
+    max-width: 100%;
+  }
+
+  .form__field {
+    &::placeholder {
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+
+  .form__submition {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    padding: 15px 40px 70px;
+  }
+
+  .form .button  {
+    margin: 0 40px;
+    width: 50%;
+  }
+
+  .form__warning {
+    margin: 0 40px;
+    padding: 0;
+    width: 50%;
+
+    text-align: left;
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .form__text {
+    @include desktop-wrapper;
+    margin-top: 55px;
+  }
+
+  .form__profile {
+    @include desktop-wrapper;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &--owner {
+      padding: 0;
+    }
+  }
+
+  .form__title {
+    @include desktop-wrapper;
+    margin-bottom: 70px;
+    padding: 0;
+  }
+
+  .form__item {
+    &--data {
+      flex-grow: 1;
+      padding: 0;
+    }
+
+    &--owner {
+      margin-top: 47px;
+      padding: 0;
+    }
+
+    &--comment {
+      padding: 0;
+    }
+
+    &--type {
+      flex-grow: 1;
+      margin-left: 70px;
+      margin-right: 0;
+      padding: 0 25px;
+    }
+  }
+
+  .form__field {
+    &--message {
+      margin-top: 20px;
+    }
+  }
+
+  .form__label {
+    &--phone,
+    &--mail {
+      width: 50%;
+      padding: 0 40px;
+    }
+
+    &--message {
+      @include desktop-wrapper;
+    }
+  }
+
+  .form__submition {
+    margin: 0 auto;
+    width: 1300px;
+    padding: 15px 0 80px;
+  }
 }

@@ -1,8 +1,6 @@
 .title {
   &--maxi {
     @include title(36px, 1.67);
-
-    padding: 30px $mobile-padding 35px;
   }
 
   &--mini {
@@ -10,11 +8,10 @@
 
     z-index: 2;
     display: inline-block;
+    vertical-align: middle;
 
-    margin: 0 auto;
-    margin-left: -$mobile-padding;
-    padding: 30px $mobile-padding;
-    max-width: 225px;
+    padding: 30px $mobile-padding 0;
+    max-width: 270px;
 
     background-color: #ffffff;
   }
@@ -25,9 +22,25 @@
     &--maxi {
       margin-top: 47px;
       padding: 0;
-
       font-size: 60px;
       line-height: 1;
+    }
+
+    &--mini {
+      margin-left: 0;
+      padding: 40px 37px 6px;
+      max-width: 100%;
+
+      font-size: 36px;
+      line-height: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    &--maxi {
+      margin-top: 75px;
     }
   }
 }
