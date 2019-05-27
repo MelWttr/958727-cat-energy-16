@@ -1,15 +1,15 @@
 .form__wrapper {
   margin: 20px auto 0;
-  min-width: $mobile-width
+  min-width: $mobile-width;
 }
 
-.form__title {
-  display: flex;
-  align-items: flex-start;
-  margin-left: -$mobile-padding;
-  padding-bottom: 20px;
-  max-width: 222px;
-}
+// .form__title {
+//   display: flex;
+//   align-items: flex-start;
+//   margin-left: -$mobile-padding;
+//   padding-bottom: 20px;
+//   max-width: 222px;
+// }
 
 .form__text {
   @include title-small(14px, 1.29, $darkest);
@@ -39,10 +39,11 @@
 
     border-top: 1px solid rgba($color: $border-color, $alpha: 0.5);
     border-bottom: 1px solid rgba($color: $border-color, $alpha: 0.5);
-
   }
-&:not(.form__item--type):not(.form__item--data)::before {
+
+  &:not(.form__item--type):not(.form__item--data)::before {
     @include green-border;
+    width: 50%;
   }
 }
 
@@ -91,7 +92,11 @@
   }
 
   &:hover {
-    border-color: rgba($color: $border-color, $alpha: 1)
+    border-color: rgba($color: $border-color, $alpha: 1);
+  }
+
+  &:hover + .form__icon {
+    fill: $green;
   }
 
   &:active,
@@ -99,6 +104,15 @@
     padding: 13px;
     border: 2px solid $brown;
     outline: none;
+  }
+
+  &:invalid {
+    padding: 13px;
+    border: 2px solid #ff8282;
+  }
+
+  &:invalid + .form__icon {
+    fill: #ff8282;
   }
 
   &--message {
@@ -110,7 +124,7 @@
 
   &--message:active,
   &--message:focus {
-   padding: 14px 10px;
+    padding: 14px 10px;
   }
 }
 
@@ -170,7 +184,7 @@
     font-size: 20px;
     line-height: 1;
 
-    &--message  {
+    &--message {
       padding: 0 40px;
     }
   }
@@ -179,11 +193,11 @@
     right: 55px;
   }
 
-  .form__title {
-    margin: 0;
-    padding-bottom: 70px;
-    max-width: 100%;
-  }
+  // .form__title {
+  //   margin: 0;
+  //   padding-bottom: 70px;
+  //   max-width: 100%;
+  // }
 
   .form__field {
     &::placeholder {
@@ -200,7 +214,7 @@
     padding: 15px 40px 70px;
   }
 
-  .form .button  {
+  .form .button {
     margin: 0 40px;
     width: 50%;
   }
@@ -217,7 +231,6 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .form__text {
     @include desktop-wrapper;
     margin-top: 55px;
@@ -235,11 +248,11 @@
     }
   }
 
-  .form__title {
-    @include desktop-wrapper;
-    margin-bottom: 70px;
-    padding: 0;
-  }
+  // .form__title {
+  //   @include desktop-wrapper;
+  //   margin-bottom: 70px;
+  //   padding: 0;
+  // }
 
   .form__item {
     &--data {

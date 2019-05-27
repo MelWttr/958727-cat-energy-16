@@ -21,7 +21,7 @@
     margin-top: 40px;
   }
 
-  .additional__wrapper{
+  .additional__wrapper {
     padding: 0 $tablet-padding;
   }
 
@@ -32,7 +32,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .additional__title{
+  .additional__title {
     width: 1300px;
     margin: 50px auto 0;
     text-align: left;
@@ -52,4 +52,3 @@
     min-width: 895px;
   }
 }
-

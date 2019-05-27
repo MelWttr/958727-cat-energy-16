@@ -19,17 +19,17 @@
     background-size: 320px 305px, 100% 305px;
 
     @media (min-resolution: $retina-dpi),
-        (min-resolution: $retina-dppx) {
-          background:
-            url("../img/index-background-mobile@2x.jpg") center no-repeat,
-            linear-gradient($deep-green 100%) no-repeat;
+      (min-resolution: $retina-dppx) {
+      background:
+        url("../img/index-background-mobile@2x.jpg") center no-repeat,
+        linear-gradient($deep-green 100%) no-repeat;
 
-          background-size: 320px 305px, 100% 305px;
-        }
+      background-size: 320px 305px, 100% 305px;
+    }
   }
 }
 
-.main__wrapper{
+.main__wrapper {
   min-width: $mobile-width;
   margin: 0 auto;
   padding: 0 $mobile-padding;
@@ -41,7 +41,7 @@
   padding: 18px $mobile-padding 0;
 }
 
-.main__title{
+.main__title {
   @include title(36px, 1, #ffffff);
 
   padding: 27px 0;
@@ -50,7 +50,7 @@
   text-align: center;
 }
 
-.main__slogan{
+.main__slogan {
   @include title-small(14px, 1, #ffffff);
 
   margin: 0;
@@ -168,5 +168,3 @@
     margin-top: 20px;
   }
 }
-
-

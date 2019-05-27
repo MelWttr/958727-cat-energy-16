@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-.slider__switcher{
+.slider__switcher {
   &--before:checked ~ .slider__slide--before {
     display: block;
   }
@@ -110,6 +110,7 @@
       clip: rect(auto, auto, auto, 338px);
     }
   }
+
   .slider__radio {
     padding-bottom: 2px;
     border-bottom: 1px dotted $border-color;
@@ -127,7 +128,7 @@
     }
   }
 
-  .slider__switcher{
+  .slider__switcher {
     &--before:checked ~ .slider__wrapper .slider__slide--before {
       clip: rect(auto auto auto auto);
     }

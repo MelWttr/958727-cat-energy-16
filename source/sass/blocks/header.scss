@@ -1,5 +1,5 @@
 @media (min-width: $tablet-width) {
-  .header{
+  .header {
     padding-top: 24px;
   }
 }
@@ -24,9 +24,9 @@
 
       @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
-          background: url("../img/index-background-desktop@2x.jpg") left no-repeat $deep-green;
-          background-size: 720px 696px;
-        }
+        background: url("../img/index-background-desktop@2x.jpg") left no-repeat $deep-green;
+        background-size: 720px 696px;
+      }
     }
   }
 }

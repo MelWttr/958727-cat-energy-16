@@ -1,10 +1,10 @@
 .about__wrapper {
- margin: 0 auto;
- padding: 25px $mobile-padding 0;
- min-width: $mobile-width;
+  margin: 0 auto;
+  padding: 25px $mobile-padding 0;
+  min-width: $mobile-width;
 }
 
-.about__list{
+.about__list {
   @include list-reducer;
 
   padding: 20px 0 25px;
@@ -35,9 +35,9 @@
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
-    background-image: url("../img/sprite-png-2x.png");
-    background-size: 260px 50px;
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/sprite-png-2x.png");
+      background-size: 260px 50px;
     }
   }
 
@@ -45,18 +45,17 @@
     background-position: -103px 5px;
   }
 
-  &:nth-of-type(2)::before{
+  &:nth-of-type(2)::before {
     background-position: -204px 5px;
   }
 
-  &:nth-of-type(3)::before{
+  &:nth-of-type(3)::before {
     background-position: -67px 5px;
   }
 
-  &:nth-of-type(4)::before{
+  &:nth-of-type(4)::before {
     background-position: 5px 5px;
   }
-
 }
 
 .about__text {
@@ -95,15 +94,15 @@
       background-position: -130px 12px;
     }
 
-    &:nth-of-type(2)::before{
+    &:nth-of-type(2)::before {
       background-position: -204px 12px;
     }
 
-    &:nth-of-type(3)::before{
+    &:nth-of-type(3)::before {
       background-position: -57px 12px;
     }
 
-    &:nth-of-type(4)::before{
+    &:nth-of-type(4)::before {
       background-position: 15px 15px;
     }
 
@@ -123,8 +122,8 @@
       font-stretch: normal;
       line-height: 0.74;
       color: #f2f2f2;
-      }
     }
+  }
 
   .about__text {
     margin: 15px 0 0;

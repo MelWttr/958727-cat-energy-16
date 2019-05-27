@@ -44,7 +44,7 @@
   margin: 0 0 20px;
 
   font-size: 16px;
-  line-height: 1.25
+  line-height: 1.25;
 }
 
 .card--more .button {
@@ -133,7 +133,9 @@
   }
 
   .card__info {
+    margin: 0 auto;
     padding: 0 $tablet-padding;
+    width: 100%;
   }
 
   .card__table {
@@ -145,13 +147,13 @@
     }
 
     &--extra .card__text {
-    border: none;
-  }
+      border: none;
+    }
 
-  &--extra th {
-    margin-right: 52px;
+    &--extra th {
+      margin-right: 52px;
+    }
   }
-}
 
   .card .button {
     margin: 0 auto;
@@ -177,13 +179,8 @@
   }
 
   .card:nth-child(even) .card__image {
-      height: 208px;
-      margin-top: -70px;
-  }
-
-  .card__info {
-    width: 100%;
-    margin: 0 auto;
+    height: 208px;
+    margin-top: -70px;
   }
 
   .card__title {
@@ -272,7 +269,7 @@
   }
 
   .card__table {
-    &--extra{
+    &--extra {
       width: 285px;
     }
   }

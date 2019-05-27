@@ -3,17 +3,24 @@
     @include title(36px, 1.67);
   }
 
-  &--mini {
+  &--mini,
+  &--form {
     @include title(24px, 1);
 
     z-index: 2;
-    display: inline-block;
-    vertical-align: middle;
 
     padding: 30px $mobile-padding 0;
     max-width: 270px;
 
     background-color: #ffffff;
+  }
+
+  &--form {
+    padding-left: 0;
+  }
+
+  &--form:first-of-type {
+    max-width: 225px;
   }
 }
 
@@ -30,6 +37,13 @@
       margin-left: 0;
       padding: 40px 37px 6px;
       max-width: 100%;
+
+      font-size: 36px;
+      line-height: 0;
+    }
+
+    &--form {
+      max-width: 220px;
 
       font-size: 36px;
       line-height: 0;
