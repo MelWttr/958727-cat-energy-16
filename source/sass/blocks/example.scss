@@ -14,7 +14,7 @@
 
 .example__text {
   margin: 0;
-  margin-top: 30px;
+  margin-top: 20px;
   padding-right: 10px;
 
   line-height: 1.29;
@@ -166,10 +166,11 @@
 
   .example__wrapper {
     @include desktop-wrapper;
+    padding-right: 0;
 
     position: relative;
 
-    margin-top: 200px;
+    margin-top: 155px;
   }
 
   .example__data {
@@ -182,8 +183,10 @@
   }
 
   .example__data .title {
-    margin-top: -200px;
+    margin-top: -140px;
     padding: 0;
+
+    z-index: 3;
   }
 
   .example__description {
@@ -191,8 +194,12 @@
   }
 
   .example__text {
-    margin-top: 200px;
+    margin-top: 150px;
     width: 430px;
+  }
+
+  .example__table {
+    margin-top: 65px;
   }
 
   .example__info {
@@ -200,5 +207,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 325px;
+  }
+
+  .example__panel {
+    margin-top: -215px;
   }
 }

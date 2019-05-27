@@ -143,6 +143,8 @@
   }
 
   .contacts__map {
+    z-index: 5;
+
     background: url("../img/bg-map-desktop@1x.png") no-repeat #f9f7f1;
     background-position: center;
 

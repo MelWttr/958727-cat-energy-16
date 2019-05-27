@@ -109,7 +109,7 @@
     position: relative;
 
     margin-top: 30px;
-    padding: 80px 264px 60px 55px;
+    padding: 80px 269px 60px 55px;
   }
 
   .programs__title {
@@ -129,13 +129,14 @@
   }
 
   .programs__text {
-    padding: 30px 0;
+    padding: 20px 0;
     font-size: 16px;
-    line-height: 1.29;
+    line-height: 1.5;
 
     border: none;
 
     &--gain {
+      padding: 24px 0;
       margin-right: 40px;
     }
   }
@@ -169,6 +170,7 @@
 
   .programs__link {
     margin-top: 35px;
+    padding-right: 50px;
 
     font-size: 20px;
     line-height: 1;
@@ -229,5 +231,14 @@
       margin-left: -67px;
       margin-top: -29px;
     }
+  }
+
+  .programs__text {
+    padding-top: 44px;
+    margin-right: 0;
+  }
+
+  .programs__link {
+    margin-top: 10px;
   }
 }

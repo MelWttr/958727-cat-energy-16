@@ -113,6 +113,9 @@
     border-bottom: 1px dotted $border-color;
     z-index: 5;
 
+    font-size: 20px;
+    line-height: 1;
+
     &:hover {
       border-bottom: 1px solid $border-color;
     }
@@ -154,9 +157,40 @@
   .slider {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -70px;
 
-    margin-top: -150px;
-    width: 50%;
+    margin-top: -160px;
+    width: 60%;
+  }
+
+  .slider__slide {
+    bottom: 140px;
+
+    &--before {
+      clip: rect(auto, 345px, auto, 0);
+    }
+
+    &--after {
+      clip: rect(auto, auto, auto, 345px);
+    }
+  }
+
+  .slider__photo {
+    width: 690px;
+    height: 517px;
+  }
+
+  .slider__wrapper {
+    padding-top: 450px;
+
+    &::before {
+      width: 365px;
+      height: 700px;
+    }
+
+    &::after {
+      width: 305px;
+      height: 700px;
+    }
   }
 }
