@@ -97,6 +97,8 @@
   .slider__slide {
     position: absolute;
     bottom: 90px;
+    left: 50%;
+    margin-left: -345px;
     z-index: 1;
 
     &--before {
@@ -164,7 +166,9 @@
   }
 
   .slider__slide {
-    bottom: 140px;
+    bottom: 100px;
+    left: 30px;
+    margin-left: 0;
 
     &--before {
       clip: rect(auto, 345px, auto, 0);
@@ -184,7 +188,7 @@
     padding-top: 450px;
 
     &::before {
-      width: 365px;
+      width: 375px;
       height: 700px;
     }
 

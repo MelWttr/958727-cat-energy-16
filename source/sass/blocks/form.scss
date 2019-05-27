@@ -82,6 +82,8 @@
   margin-left: 15px;
   padding: 14px;
 
+  text-transform: uppercase;
+
   border: 1px solid rgba($color: $border-color, $alpha: 0.5);
 
   &::placeholder {

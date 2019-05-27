@@ -20,9 +20,12 @@
   line-height: 1.29;
 }
 
-.example__table{
- margin: 0 auto;
- margin-top: 25px;
+.example__table {
+ position: relative;
+
+ margin-top: 15px;
+ padding-bottom: 70px;
+ width: 100%;
 }
 
 .example__row {
@@ -34,6 +37,8 @@
 
 .example__result {
   @include title (24px, 1);
+  position: absolute;
+  top: 10px;
 
   padding: 17px 0;
   width: 125px;
@@ -43,10 +48,19 @@
 
   border: 1px solid $border-color;
   border-radius: 3px;
+
+  &:first-of-type {
+    left: 0;
+  }
+
+  &:last-of-type {
+    right: 0;
+  }
 }
 
 .example__description {
-  margin: -10px 18px 0;
+  position: absolute;
+  top: 60px;
   width: 90px;
 
   font-size: 12px;
@@ -56,8 +70,12 @@
 
   background-color: $gray;
 
-  &:first-of-type{
-    margin-right: 30px;
+  &:first-of-type {
+    left: 19px;
+  }
+
+  &:nth-of-type(2) {
+    right: 17px;
   }
 }
 
@@ -65,7 +83,7 @@
   @include title-small(14px, 1.43, $darkest);
 
   margin: 0 auto;
-  margin-top: 18px;
+  margin-top: 28px;
 
   text-align: center;
 }
@@ -104,6 +122,7 @@
 
   .example__table {
     margin: 50px 0;
+    width: 52%;
   }
 
   .example__info {
@@ -117,24 +136,31 @@
 
   .example__result {
     width: 162px;
+    top: 5px;
 
     font-size: 30px;
     line-height: 1.23;
 
-    &:not(:first-of-type){
-      margin-left: 40px;
-    }
   }
 
   .example__description {
-    margin: -10px 10px 0;
     width: 142px;
+    top: 72px;
 
     font-size: 14px;
     line-height: 1;
     color: $brown;
 
     background-color: #ffffff;
+
+    &:first-of-type {
+      width: 122px;
+      left: 20px;
+    }
+
+    &:nth-of-type(2) {
+      right: 10px;
+    }
   }
 
   .example__panel {
@@ -170,7 +196,7 @@
 
     position: relative;
 
-    margin-top: 155px;
+    margin-top: 165px;
   }
 
   .example__data {
@@ -199,7 +225,9 @@
   }
 
   .example__table {
-    margin-top: 65px;
+    margin-top: 45px;
+    margin-bottom: 70px;
+    width: 58%;
   }
 
   .example__info {
@@ -210,6 +238,9 @@
   }
 
   .example__panel {
-    margin-top: -215px;
+    display: flex;
+    align-items: center;
+    margin-top: -170px;
+    margin-left: 85px;
   }
 }
