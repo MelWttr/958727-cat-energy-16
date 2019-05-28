@@ -1,11 +1,13 @@
 .about__wrapper {
- margin: 0 auto;
- padding: 0 $mobile-padding;
- width: $mobile-width;
+  margin: 0 auto;
+  padding: 25px $mobile-padding 0;
+  min-width: $mobile-width;
 }
 
-.about__list{
+.about__list {
   @include list-reducer;
+
+  padding: 20px 0 25px;
 }
 
 .about__item {
@@ -14,7 +16,7 @@
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-left: 80px;
   min-height: 60px;
 
@@ -33,28 +35,27 @@
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
-    background-image: url("../img/sprite-png-2x.png");
-    background-size: 201px 50px;
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/sprite-png-2x.png");
+      background-size: 260px 50px;
     }
   }
 
   &:first-of-type::before {
+    background-position: -103px 5px;
+  }
+
+  &:nth-of-type(2)::before {
+    background-position: -204px 5px;
+  }
+
+  &:nth-of-type(3)::before {
+    background-position: -67px 5px;
+  }
+
+  &:nth-of-type(4)::before {
     background-position: 5px 5px;
   }
-
-  &:nth-of-type(2)::before{
-    background-position: -47px 5px;
-  }
-
-  &:nth-of-type(3)::before{
-    background-position: -96px 5px;
-  }
-
-  &:nth-of-type(4)::before{
-    background-position: -146px 5px;
-  }
-
 }
 
 .about__text {
@@ -62,3 +63,84 @@
   line-height: 1.29;
 }
 
+@media (min-width: $tablet-width) {
+  .about__wrapper {
+    padding: 0 $tablet-padding;
+
+    border-bottom: 1px solid $border-color;
+  }
+
+  .about__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    margin-top: 30px;
+
+    counter-reset: section;
+  }
+
+  .about__item {
+    margin: 20px 75px 60px 0;
+    padding: 100px 0 45px 0;
+    width: 245px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &:first-of-type::before {
+      background-position: -130px 12px;
+    }
+
+    &:nth-of-type(2)::before {
+      background-position: -204px 12px;
+    }
+
+    &:nth-of-type(3)::before {
+      background-position: -57px 12px;
+    }
+
+    &:nth-of-type(4)::before {
+      background-position: 15px 15px;
+    }
+
+    &::after {
+      counter-increment: section;
+      content: counter(section);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -2;
+
+      font-family: "Oswald-Regular", "Arial", sans-serif;
+      font-size: 281px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.74;
+      color: #f2f2f2;
+    }
+  }
+
+  .about__text {
+    margin: 15px 0 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__wrapper {
+    @include desktop-wrapper;
+
+    border: none;
+  }
+
+  .about__item {
+    margin-right: 0;
+  }
+}

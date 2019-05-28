@@ -10,6 +10,11 @@
   <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
   <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
   <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill_min.js" async></script>
+</head>
 </head>
 
 <body>
@@ -19,7 +24,7 @@
   <header class="header">
     <nav class="navigation navigation--opened navigation--nojs">
       <div class="navigation__logo">
-        <a class="logo logo--main" aria-label="логотип магазина catenergy">
+        <a href="index.html" class="logo logo--main" aria-label="логотип магазина catenergy">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -32,7 +37,7 @@
       </div>
       <ul class="navigation__list">
         <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
-        <li class="navigation__item"><a class="navigation__link">Каталог продукции</a></li>
+        <li class="navigation__item"><a class="navigation__link navigation__link--active">Каталог продукции</a></li>
         <li class="navigation__item"><a href="form.html" class="navigation__link">Выбор программы</a></li>
       </ul>
     </nav>
@@ -78,7 +83,7 @@
               </tr>
             </table>
           </div>
-          <a href="#" class="button button--green">Заказать</a>
+          <a href="order.html" class="button button--green button--nojs">Заказать</a>
         </article>
         <article class="card">
           <picture>
@@ -113,7 +118,7 @@
               </tr>
             </table>
           </div>
-          <a href="#" class="button button--green">Заказать</a>
+          <a href="order.html" class="button button--green button--nojs">Заказать</a>
         </article>
         <article class="card">
           <picture>
@@ -148,7 +153,7 @@
               </tr>
             </table>
           </div>
-          <a href="#" class="button button--green">Заказать</a>
+          <a href="order.html" class="button button--green button--nojs">Заказать</a>
         </article>
         <article class="card">
           <picture>
@@ -181,7 +186,7 @@
               </tr>
             </table>
           </div>
-          <a href="#" class="button button--green">Заказать</a>
+          <a href="order.html" class="button button--green button--nojs">Заказать</a>
         </article>
         <article class="card">
           <picture>
@@ -216,7 +221,7 @@
               </tr>
             </table>
           </div>
-          <a href="#" class="button button--green">Заказать</a>
+          <a href="order.html" class="button button--green button--nojs">Заказать</a>
         </article>
         <article class="card">
           <picture>
@@ -251,7 +256,7 @@
               </tr>
             </table>
           </div>
-          <a href="#" class="button button--green">Заказать</a>
+          <a href="order.html" class="button button--green button--nojs">Заказать</a>
         </article>
         <article class="card">
           <picture>
@@ -286,65 +291,70 @@
               </tr>
             </table>
           </div>
-          <a href="#" class="button button--green">Заказать</a>
+          <a href="order.html" class="button button--green button--nojs">Заказать</a>
         </article>
         <div class="card card--more">
           <button class="card__plus-button" aria-label="показать еще 100500 товаров"></button>
           <p class="card__title card__title--more">Показать еще 100500 товаров</p>
           <p class="card__text card__text--more">На самом деле вкусов гораздо больше!</p>
-          <a href="#" class="button button--gray">Показать все</a>
+          <a href="goods.html" class="button button--gray button--nojs">Показать все</a>
         </div>
       </div>
     </section>
     <section class="additional">
+      <div class="additional__title">
+        <h2 class="title title--mini ">Дополнительные товары</h2>
+      </div>
       <div class="additional__wrapper">
-        <h2 class="title title--mini">Дополнительные товары</h2>
-        <article class="card card--extra">
-          <h2 class="card__title card__title--extra">Сахарозаменитель</h2>
-          <table class="card__table card__table--extra">
-            <tr class="card__text">
-              <th>1 упаковка (100 г)</th>
-              <td>200 Р.</td>
-            </tr>
-          </table>
-          <a href="#" class="button button--green">Заказать</a>
-        </article>
-        <article class="card card--extra">
-          <h2 class="card__title card__title--extra">Питьевая вода</h2>
-          <table class="card__table card__table--extra">
-            <tr class="card__text">
-              <th>5 литров</th>
-              <td>50 Р.</td>
-            </tr>
-          </table>
-          <a href="#" class="button button--green">Заказать</a>
-        </article>
-        <article class="card card--extra">
-          <h2 class="card__title card__title--extra">Молоко</h2>
-          <table class="card__table card__table--extra">
-            <tr class="card__text">
-              <th>1 литр</th>
-              <td>100 Р.</td>
-            </tr>
-          </table>
-          <a href="#" class="button button--green">Заказать</a>
-        </article>
-        <article class="card card--extra">
-          <h2 class="card__title card__title--extra">Витамины</h2>
-          <table class="card__table card__table--extra">
-            <tr class="card__text">
-              <th>1 упаковка (30 г)</th>
-              <td>300 Р.</td>
-            </tr>
-          </table>
-          <a href="#" class="button button--green">Заказать</a>
-        </article>
+        <div class="additional__container">
+          <article class="card card--extra">
+            <h2 class="card__title card__title--extra">Сахарозаменитель</h2>
+            <table class="card__table card__table--extra">
+              <tr class="card__text">
+                <th>1 упаковка (100 г)</th>
+                <td>200 Р.</td>
+              </tr>
+            </table>
+            <a href="order.html" class="button button--green button--nojs">Заказать</a>
+          </article>
+          <article class="card card--extra">
+            <h2 class="card__title card__title--extra">Питьевая вода</h2>
+            <table class="card__table card__table--extra">
+              <tr class="card__text">
+                <th>5 литров</th>
+                <td>50 Р.</td>
+              </tr>
+            </table>
+            <a href="order.html" class="button button--green button--nojs">Заказать</a>
+          </article>
+          <article class="card card--extra">
+            <h2 class="card__title card__title--extra">Молоко</h2>
+            <table class="card__table card__table--extra">
+              <tr class="card__text">
+                <th>1 литр</th>
+                <td>100 Р.</td>
+              </tr>
+            </table>
+            <a href="order.html" class="button button--green button--nojs">Заказать</a>
+          </article>
+          <article class="card card--extra">
+            <h2 class="card__title card__title--extra">Витамины</h2>
+            <table class="card__table card__table--extra">
+              <tr class="card__text">
+                <th>1 упаковка (30 г)</th>
+                <td>300 Р.</td>
+              </tr>
+            </table>
+            <a href="order.html" class="button button--green button--nojs">Заказать</a>
+          </article>
+        </div>
+
         <div class="promo">
           <svg class="promo__icon" width="56" height="61">
             <use xlink:href="#icon-gift"></use>
           </svg>
           <p class="promo__text">Закажите все
-            и получите чехол для кота в подарок!</p>
+            и&nbsp;получите чехол для кота в подарок!</p>
         </div>
       </div>
     </section>
@@ -353,12 +363,14 @@
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="contacts__advert contacts__advert--gray">
           <p class="contacts__text contacts__text--bold">приглашаем
-            к сотрудничеству
+            к&nbsp;сотрудничеству
             дилеров!</p>
           <address class="contacts__text contacts__text--address">ул. Большая Конюшенная, д. 19/8
-            Санкт-Петербург</address>
+            <span>Санкт-Петербург</span></address>
         </div>
-        <div class="contacts__map"></div>
+      </div>
+      <div class="contacts__map">
+        <div class="contacts__frame" id="map"></div>
       </div>
     </section>
   </main>
@@ -370,17 +382,17 @@
         </a></div>
       <ul class="social">
         <li class="social__item"><a href="#" class="social__link" aria-label="catenergy вконтакте">
-            <svg width="22" height="12">
+            <svg class="social__icon social__icon--vk" width="22" height="12">
               <use xlink:href="#icon-vk-mobile"></use>
             </svg>
           </a></li>
         <li class="social__item"><a href="#" class="social__link" aria-label="catenergy инстаграм">
-            <svg width="17" height="17">
-              <use xlink:href="#icon-insta-mobile"></use>
+            <svg class="social__icon social__icon--insta" width="17" height="17">
+              <use xlink:href="#icon-insta"></use>
             </svg>
           </a></li>
         <li class="social__item"><a href="#" class="social__link" aria-label="catenergy фейсбук">
-            <svg width="10" height="19">
+            <svg class="social__icon social__icon--fb" width="10" height="19">
               <use xlink:href="#icon-fb-mobile"></use>
             </svg>
           </a></li>
@@ -388,7 +400,8 @@
       <div class="footer__developer">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link"
           aria-label="ссылка на сайт разработчика">HTML Academy
-          <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34">
+          <svg class="footer__icon footer__icon--academy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"
+            width="39" height="46">
             <path
               d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z" />
           </svg>
@@ -396,3 +409,10 @@
       </div>
     </div>
   </footer>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGVXWYY2m2TeIj8YyUti9zJgliBZo77Zg&callback=initMap">
+    </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

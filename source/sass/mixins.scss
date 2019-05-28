@@ -35,13 +35,19 @@
 @mixin green-border ($top: 42px, $color: $green) {
   content: "";
 
-    position: absolute;
-    top: $top;
-    right: 0;
-    z-index: -1;
+  position: absolute;
+  top: $top;
+  right: 0;
+  z-index: -1;
 
-    width: 100%;
-    height: 3px;
+  width: 100%;
+  height: 3px;
 
-    background-color: $color;
+  background-color: $color;
+}
+
+@mixin desktop-wrapper {
+  margin: 0 auto;
+  width: 1300px;
+  padding: 0 40px;
 }

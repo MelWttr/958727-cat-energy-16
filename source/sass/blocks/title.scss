@@ -1,21 +1,78 @@
 .title {
   &--maxi {
     @include title(36px, 1.67);
-
-    padding: 30px $mobile-padding 35px;
   }
 
-  &--mini {
+  &--mini,
+  &--form {
     @include title(24px, 1);
 
     z-index: 2;
-    display: inline-block;
 
-    margin: 0 auto;
-    margin-left: -$mobile-padding;
-    padding: 30px $mobile-padding;
-    max-width: 225px;
+    padding: 30px $mobile-padding 0;
+    max-width: 270px;
 
     background-color: #ffffff;
+  }
+
+  &--form {
+    margin-bottom: 23px;
+    padding-left: 0;
+    padding-top: 28px;
+  }
+
+  &--br {
+    max-width: 205px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .title {
+    &--maxi {
+      margin-top: 47px;
+      padding: 0;
+      font-size: 60px;
+      line-height: 1;
+    }
+
+    &--mini {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0;
+      padding: 40px 37px 6px;
+      max-width: 100%;
+
+      font-size: 36px;
+      line-height: 0;
+    }
+
+    &--form {
+      margin-bottom: 54px;
+      padding: 38px 40px 8px;
+      max-width: 100%;
+
+      font-size: 36px;
+      line-height: 0;
+    }
+
+    &--add {
+      margin-bottom: 57px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    &--maxi {
+      margin-top: 75px;
+    }
+
+    &--form {
+      margin-bottom: 72px;
+    }
+
+    &--add {
+      margin-bottom: 57px;
+    }
   }
 }

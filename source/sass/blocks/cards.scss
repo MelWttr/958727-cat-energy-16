@@ -1,4 +1,24 @@
+.cards {
+  margin-top: 25px;
+}
+
 .cards__wrapper {
   margin: 0 auto;
-  width: $mobile-width;
+  min-width: $mobile-width;
+}
+
+@media (min-width: $tablet-width) {
+  .cards__wrapper {
+    padding: 0 $tablet-padding;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cards__wrapper {
+    width: 1300px;
+    padding: 0 $desktop-padding;
+  }
 }

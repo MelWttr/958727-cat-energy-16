@@ -1,20 +1,20 @@
-.button{
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-family: "Oswald-Regular", "Arial", sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.25;
-    text-align: center;
-    text-transform: uppercase;
-    color: $brown;
+  font-family: "Oswald-Regular", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.29;
+  text-align: center;
+  text-transform: uppercase;
+  color: $brown;
 
-    background-color: $gray;
-    cursor: pointer;
+  background-color: $gray;
+  cursor: pointer;
 
   &--green {
     color: #ffffff;
@@ -22,4 +22,20 @@
     background-color: $green;
   }
 
+  &--green:hover {
+    background-color: $deep-green;
+  }
+
+  &--green:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    height: 52px;
+
+    font-size: 20px;
+    line-height: 1;
+  }
 }

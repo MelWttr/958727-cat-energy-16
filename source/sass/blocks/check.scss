@@ -3,8 +3,7 @@
 }
 
 .check__item {
-  margin-top: 33px;
-
+  margin-top: 13px;
 }
 
 .check__label {
@@ -13,6 +12,14 @@
   margin-top: 45px;
 
   cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.check__label:hover .check__box {
+  border-color: $deep-gray;
 }
 
 .check__box {
@@ -20,10 +27,9 @@
 
   display: inline-block;
   vertical-align: middle;
-  margin-top: -12px;
-  margin-right: 20px;
-  width: 40px;
-  height: 40px;
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
 
   border: 1px solid $border-color;
 
@@ -44,14 +50,6 @@
 
     transform: rotate(-45deg);
   }
-
-  &:hover {
-    border-color: $green;
-  }
-
-  &:active {
-    border-color: rgba($color: $brown, $alpha: 0.3);
-  }
 }
 
 .check__input:focus + .check__box {
@@ -63,29 +61,50 @@
   display: block;
 }
 
-// @media (min-width: $tablet-width) {
-//   .check {
-//     display: flex;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//   }
+@media (min-width: $tablet-width) {
+  .check {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
 
-//   .check__box {
-//     width: 52px;
-//     height: 52px;
-//     margin-top: -7px;
-//     margin-right: 20px;
+  .check__item {
+    width: 273px;
+    margin: 0 30px 40px;
+  }
 
-//     &::before {
-//       margin-left: -15px;
-//       margin-top: -12px;
-//       width: 28px;
-//       height: 16px;
-//     }
-//   }
+  .check__box {
+    width: 40px;
+    height: 40px;
+    margin-top: -7px;
+    margin-right: 20px;
 
-//   .check__label {
-//     @include title(19px, 0.95);
-//     padding-bottom: 10px;
-//   }
-// }
+    &::before {
+      margin-left: -10px;
+      margin-top: -10px;
+      width: 21px;
+      height: 12px;
+    }
+  }
+
+  .check__label {
+    padding-bottom: 10px;
+
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .check {
+    margin: 0 auto;
+    padding: 0;
+    width: 1300px;
+  }
+
+  .check__item {
+    width: 245px;
+    margin: 0 40px 45px;
+  }
+}
