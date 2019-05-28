@@ -8,9 +8,7 @@
 }
 
 .slider__slide {
-  margin: 0 auto;
-  margin-top: 38px;
-  margin-bottom: 20px;
+  margin: 38px auto 25px;
 
   &--after {
     display: none;
@@ -20,7 +18,7 @@
 .slider__radio {
   @include title-small(16px, 1.25, $darkest);
 
-  margin: 0 20px;
+  margin: 0 9px 0 15px;
 
   cursor: pointer;
 }
@@ -65,8 +63,8 @@
     align-items: center;
     flex-wrap: wrap;
 
-    margin-top: 160px;
-    padding-top: 452px;
+    margin-top: 155px;
+    padding-top: 460px;
     width: 100%;
 
     &::before {
@@ -89,15 +87,15 @@
       right: 0;
 
       height: 100%;
-      width: 51%;
+      width: 50%;
       background-color: #eaeaea;
     }
   }
 
   .slider__slide {
     position: absolute;
-    bottom: 90px;
-    left: 50%;
+    bottom: 84px;
+    left: 51%;
     margin-left: -345px;
     z-index: 1;
 
@@ -112,6 +110,7 @@
   }
 
   .slider__radio {
+    margin: 0 20px;
     padding-bottom: 2px;
     border-bottom: 1px dotted $border-color;
     z-index: 5;
@@ -160,7 +159,7 @@
   .slider {
     position: absolute;
     top: 0;
-    right: -70px;
+    right: -60px;
 
     margin-top: -160px;
     width: 60%;
@@ -172,12 +171,16 @@
     margin-left: 0;
 
     &--before {
-      clip: rect(auto, 345px, auto, 0);
+      clip: rect(auto, 365px, auto, 0);
     }
 
     &--after {
-      clip: rect(auto, auto, auto, 345px);
+      clip: rect(auto, auto, auto, 365px);
     }
+  }
+
+  .slider__radio {
+    margin: 0 20px 0 17px;
   }
 
   .slider__photo {
@@ -186,15 +189,16 @@
   }
 
   .slider__wrapper {
+    margin-top: 160px;
     padding-top: 450px;
 
     &::before {
-      width: 375px;
+      width: 395px;
       height: 700px;
     }
 
     &::after {
-      width: 305px;
+      width: 285px;
       height: 700px;
     }
   }

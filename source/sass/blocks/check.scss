@@ -61,6 +61,16 @@
   display: block;
 }
 
+.check__input:disabled + .check__box {
+  background-color: $gray;
+  border: none;
+}
+
+.check__input:checked:disabled + .check__box::before {
+  border-color: $green;
+  opacity: 0.5;
+}
+
 @media (min-width: $tablet-width) {
   .check {
     display: flex;

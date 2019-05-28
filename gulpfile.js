@@ -79,7 +79,7 @@ gulp.task("sprite-icons", function () {
   return gulp.src("source/img/icon-*.svg")
     .pipe(cheerio({
       run: function ($) {
-        $('[fill]').removeAttr('fill');
+        $("[fill]").removeAttr("fill");
       },
       parserOptions: {
         xmlMode: true

@@ -18,7 +18,7 @@
   flex-wrap: wrap;
 
   margin-top: 20px;
-  padding: 30px 20px 20px;
+  padding: 24px 20px 20px;
 
   background-color: $gray;
 }
@@ -44,7 +44,7 @@
   }
 
   &--hor {
-    right: -7px;
+    right: -10px;
     top: 10px;
 
     width: 67px;
@@ -68,9 +68,11 @@
 
 .programs__text {
   margin: 0;
-  padding: 20px 0;
+  padding: 24px 0 22px;
 
+  font-family: Arial, sans-serif;
   line-height: 1.29;
+
   border-bottom: 1px solid $border-color;
 }
 
@@ -78,7 +80,7 @@
   @include title(16px, 1);
 
   margin-top: 20px;
-  padding-right: 40px;
+  padding-right: 35px;
 
   text-transform: uppercase;
 
@@ -87,13 +89,13 @@
   background-position: right;
 
   &:hover {
-    padding-right: calc(40px + 9px);
+    padding-right: calc(35px + 9px);
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-size: 34px 12px;
   }
 
   &:active {
-    padding-right: calc(40px + 9px);
+    padding-right: calc(35px + 9px);
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-size: 34px 12px;
     opacity: 0.3;
@@ -129,7 +131,7 @@
   }
 
   .programs__text {
-    padding: 20px 0;
+    padding: 25px 0 20px 0;
     font-size: 16px;
     line-height: 1.5;
 
@@ -144,7 +146,7 @@
   .programs__icon {
     position: absolute;
     top: 90px;
-    right: 45px;
+    right: 60px;
 
     width: 200px;
     height: 200px;
@@ -169,17 +171,23 @@
   }
 
   .programs__link {
-    margin-top: 35px;
-    padding-right: 50px;
+    margin-top: 34px;
+    padding-right: 46px;
 
     font-size: 20px;
     line-height: 1;
+
+    &:hover,
+    &:active {
+      padding-right: (46px + 9px);
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .programs__wrapper {
     margin: 0 auto;
+    margin-top: 10px;
     width: 1300px;
     padding: 0;
   }
@@ -194,7 +202,7 @@
 
     width: 570px;
     margin: 0 40px;
-    padding: 50px 50px 60px;
+    padding: 45px 50px 60px;
   }
 
   .programs__title {
@@ -234,11 +242,17 @@
   }
 
   .programs__text {
-    padding-top: 44px;
+    padding-top: 43px;
     margin-right: 0;
   }
 
   .programs__link {
-    margin-top: 10px;
+    margin-top: 5px;
+    padding-right: 49px;
+    &:hover,
+    &:active {
+      padding-right: (49px + 9px);
+    }
+
   }
 }

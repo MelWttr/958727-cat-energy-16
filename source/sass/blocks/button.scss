@@ -4,17 +4,29 @@
   justify-content: center;
   align-items: center;
 
-  font-family: "Oswald-Regular", "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.29;
   text-align: center;
   text-transform: uppercase;
-  color: $brown;
 
-  background-color: $gray;
   cursor: pointer;
+
+  &--gray {
+    color: $brown;
+
+    background-color: $gray;
+  }
+
+  &--gray:hover {
+    background-color: #ebebeb;
+  }
+
+  &--gray:active {
+    background-color: #ebebeb;
+    color: rgba($color: $brown, $alpha: 0.3);
+  }
 
   &--green {
     color: #ffffff;

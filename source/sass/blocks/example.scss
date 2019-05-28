@@ -3,7 +3,7 @@
 }
 
 .example__wrapper {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .example__data {
@@ -13,10 +13,10 @@
 }
 
 .example__text {
-  margin: 0;
-  margin-top: 20px;
+  margin: 25px 0 0;
   padding-right: 10px;
 
+  font-family: Arial, sans-serif;
   line-height: 1.29;
 }
 
@@ -63,6 +63,7 @@
   top: 60px;
   width: 90px;
 
+  font-family: Arial, sans-serif;
   font-size: 12px;
   line-height: 1;
   text-align: center;
@@ -114,7 +115,7 @@
   }
 
   .example__text {
-    margin-top: 60px;
+    margin-top: 65px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -126,7 +127,13 @@
   }
 
   .example__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
     margin: 0;
+    height: 50px;
     width: 180px;
 
     font-size: 20px;
@@ -135,6 +142,7 @@
   }
 
   .example__result {
+    padding-top: 12px;
     width: 162px;
     top: 5px;
 
@@ -144,7 +152,7 @@
 
   .example__description {
     width: 142px;
-    top: 72px;
+    top: 65px;
 
     font-size: 14px;
     line-height: 1;
@@ -163,8 +171,11 @@
   }
 
   .example__panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    margin-top: -180px;
+    margin-top: -165px;
 
     z-index: 1;
   }
@@ -195,7 +206,7 @@
 
     position: relative;
 
-    margin-top: 165px;
+    margin-top: 160px;
   }
 
   .example__data {
@@ -216,30 +227,34 @@
 
   .example__description {
     background-color: $gray;
+    top: 70px;
+  }
+
+  .example__result {
+    padding-top: 17px;
   }
 
   .example__text {
-    margin-top: 150px;
-    width: 430px;
+    margin-top: 146px;
+    padding: 0;
+    width: 435px;
   }
 
   .example__table {
-    margin-top: 45px;
+    margin-top: 60px;
     margin-bottom: 70px;
     width: 58%;
   }
 
   .example__info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    height: auto;
     width: 325px;
   }
 
   .example__panel {
-    display: flex;
-    align-items: center;
-    margin-top: -170px;
-    margin-left: 85px;
+    justify-content: flex-start;
+    margin-top: -149px;
+    margin-left: 95px;
   }
 }

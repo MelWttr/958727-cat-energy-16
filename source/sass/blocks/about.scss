@@ -1,13 +1,13 @@
 .about__wrapper {
   margin: 0 auto;
-  padding: 25px $mobile-padding 0;
+  padding: 18px $mobile-padding 0;
   min-width: $mobile-width;
 }
 
 .about__list {
   @include list-reducer;
 
-  padding: 20px 0 25px;
+    padding: 30px 0 22px;
 }
 
 .about__item {
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: flex-start;
   align-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding-left: 80px;
   min-height: 60px;
 
@@ -42,7 +42,7 @@
   }
 
   &:first-of-type::before {
-    background-position: -103px 5px;
+    background-position: -132px 5px;
   }
 
   &:nth-of-type(2)::before {
@@ -59,7 +59,9 @@
 }
 
 .about__text {
-  margin: 6px 0;
+  margin: 0 0 6px;
+
+  font-family: Arial, sans-serif;
   line-height: 1.29;
 }
 
@@ -74,15 +76,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 0;
-    margin-top: 30px;
+    padding: 20px 0 0;
+    margin-top: 25px;
 
     counter-reset: section;
   }
 
   .about__item {
-    margin: 20px 75px 60px 0;
-    padding: 100px 0 45px 0;
+    margin: 25px 80px 70px 0;
+    padding: 100px 0 40px;
     width: 245px;
 
     &::before {
@@ -91,11 +93,15 @@
     }
 
     &:first-of-type::before {
-      background-position: -130px 12px;
+      background-position: -123px 12px;
+    }
+
+    &:first-of-type::after {
+      right: 15px;
     }
 
     &:nth-of-type(2)::before {
-      background-position: -204px 12px;
+      background-position: -194px 12px;
     }
 
     &:nth-of-type(3)::before {
@@ -112,10 +118,9 @@
 
       position: absolute;
       top: 0;
-      right: 0;
+      right: 0px;
       z-index: -2;
 
-      font-family: "Oswald-Regular", "Arial", sans-serif;
       font-size: 281px;
       font-weight: normal;
       font-style: normal;
@@ -126,7 +131,7 @@
   }
 
   .about__text {
-    margin: 15px 0 0;
+    margin: 10px 0 0;
 
     font-size: 16px;
     line-height: 1.5;
@@ -140,7 +145,17 @@
     border: none;
   }
 
+  .about__text {
+    margin-top: 14px;
+    padding: 0;
+  }
+
+  .about__list {
+    margin-top: 30px;
+  }
+
   .about__item {
-    margin-right: 0;
+    margin: 20px 0 60px 0;
+    padding: 100px 0 45px 0;
   }
 }

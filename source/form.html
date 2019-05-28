@@ -21,13 +21,14 @@
     <include src="build/img/sprite-icons.svg"></include>
   </div>
   <header class="header">
-    <nav class="navigation navigation--opened navigation--nojs">
+    <nav class="navigation navigation--closed navigation--nojs">
       <div class="navigation__logo">
         <a href="index.html" class="logo logo--main" aria-label="логотип магазина catenergy">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="191" height="39" alt="логотип магазина catenergy">
+            <img class="logo__picture" src="img/logo-mobile.svg" width="191" height="39"
+              alt="логотип магазина catenergy">
           </picture>
         </a>
         <button class="navigation__toggle" type="button">
@@ -37,8 +38,7 @@
       <ul class="navigation__list">
         <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
         <li class="navigation__item"><a href="catalog.html" class="navigation__link">Каталог продукции</a></li>
-        <li class="navigation__item"><a class="navigation__link navigation__link--active">Выбор
-            программы</a></li>
+        <li class="navigation__item"><a class="navigation__link navigation__link--active">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
@@ -64,12 +64,12 @@
           <fieldset class="form__item form__item--type">
             <legend class="form__title visually-hidden">Тип программы</legend>
             <label class="radiobutton">
-              <input type="radio" class="radiobutton__input visually-hidden" name="type" checked>
+              <input type="radio" class="radiobutton__input visually-hidden" name="type">
               <span class="radiobutton__icon"></span>
               Похудение
             </label>
             <label class="radiobutton">
-              <input type="radio" class="radiobutton__input visually-hidden" name="type">
+              <input type="radio" class="radiobutton__input visually-hidden" name="type" disabled>
               <span class="radiobutton__icon"></span>
               Набор массы
             </label>
@@ -104,6 +104,7 @@
             <legend class="title title--form">Комментарий</legend>
             <label class="form__label form__label--message">
               <textarea class="form__field form__field--message" cols="30" rows="6"
+                aria-label="поле для ввода информации о коте"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
@@ -135,7 +136,7 @@
               </li>
               <li class="check__item">
                 <label class="check__label" for="checkbox-4">
-                  <input type="checkbox" class="check__input visually-hidden" id="checkbox-4">
+                  <input type="checkbox" class="check__input visually-hidden" id="checkbox-4" checked disabled>
                   <span class="check__box"></span>
                   Витамины
                 </label>

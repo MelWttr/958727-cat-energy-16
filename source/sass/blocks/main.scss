@@ -94,6 +94,7 @@
 
   .main__title {
     padding-top: 5px;
+    padding-bottom: 29px;
     width: 100%;
 
     text-align: left;
@@ -139,6 +140,10 @@
     max-width: 1300px;
   }
 
+  .main__title {
+    padding-bottom: 27px;
+  }
+
   .main__container {
     width: 1300px;
     padding: 0 $desktop-padding;
@@ -163,6 +168,6 @@
   }
 
   .main__slogan {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }

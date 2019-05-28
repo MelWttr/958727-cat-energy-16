@@ -9,3 +9,23 @@
     opacity: 0.6;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .logo {
+    &--bottom {
+      margin-left: 10px;
+    }
+  }
+
+  .logo__picture {
+    width: 174px;
+    height: 59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__picture {
+    width: 203px;
+    height: 60px;
+  }
+}

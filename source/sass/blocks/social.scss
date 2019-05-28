@@ -6,14 +6,19 @@
   align-items: center;
   flex-wrap: wrap;
 
-  padding: 20px 0;
+  padding: 23px 0 20px 0;
 
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
 }
 
 .social__item {
-  margin: 0 20px;
+  margin: 0 22px 0 18px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
 }
 
 .social__link svg {
@@ -31,11 +36,18 @@
 
 @media (min-width: $tablet-width) {
   .social {
+    width: 130px;
+    justify-content: space-between;
+    margin: 0;
+    margin-left: 18px;
+    padding-top: 10px;
+    padding-bottom: 0;
+
     border: none;
   }
 
   .social__item {
-    margin-right: 15px;
+    margin: 0;
   }
 
   .social__icon {

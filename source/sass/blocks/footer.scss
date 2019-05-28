@@ -25,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
 
+  font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   color: $brown;
@@ -52,13 +53,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 27px $tablet-padding 32px;
+    padding: 22px 25px 32px 20px;
+  }
+
+  .footer__link {
+
+    padding-top: 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .footer__wrapper {
     margin: 0 auto;
+    padding: 27px 40px 32px 30px;
     width: 1300px;
   }
 }

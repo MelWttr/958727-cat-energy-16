@@ -56,6 +56,16 @@
     display: block;
   }
 
+  &:disabled + .radiobutton__icon {
+    background-color: $gray;
+    border: none;
+  }
+
+  &:checked:disabled + .radiobutton__icon::before {
+    border-color: $green;
+    opacity: 0.5;
+  }
+
   &:focus + .radiobutton__icon {
     border-color: rgba($color: $brown, $alpha: 0.3);
   }

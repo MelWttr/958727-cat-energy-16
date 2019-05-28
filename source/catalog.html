@@ -22,13 +22,14 @@
     <include src="build/img/sprite-icons.svg"></include>
   </div>
   <header class="header">
-    <nav class="navigation navigation--opened navigation--nojs">
+    <nav class="navigation navigation--closed navigation--nojs">
       <div class="navigation__logo">
         <a href="index.html" class="logo logo--main" aria-label="логотип магазина catenergy">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="191" height="39" alt="логотип магазина catenergy">
+            <img class="logo__picture" src="img/logo-mobile.svg" width="191" height="39"
+              alt="логотип магазина catenergy">
           </picture>
         </a>
         <button class="navigation__toggle" type="button">
@@ -38,7 +39,7 @@
       <ul class="navigation__list">
         <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
         <li class="navigation__item"><a class="navigation__link navigation__link--active">Каталог продукции</a></li>
-        <li class="navigation__item"><a href="form.html" class="navigation__link">Выбор программы</a></li>
+        <li class="navigation__item"><a href="form.html" class="navigation__link">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
