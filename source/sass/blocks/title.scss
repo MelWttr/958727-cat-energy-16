@@ -16,11 +16,13 @@
   }
 
   &--form {
+    margin-bottom: 23px;
     padding-left: 0;
+    padding-top: 28px;
   }
 
-  &--form:first-of-type {
-    max-width: 225px;
+  &--br {
+    max-width: 205px;
   }
 }
 
@@ -34,6 +36,8 @@
     }
 
     &--mini {
+      display: inline-block;
+      vertical-align: middle;
       margin-left: 0;
       padding: 40px 37px 6px;
       max-width: 100%;
@@ -43,10 +47,16 @@
     }
 
     &--form {
-      max-width: 220px;
+      margin-bottom: 54px;
+      padding: 38px 40px 8px;
+      max-width: 100%;
 
       font-size: 36px;
       line-height: 0;
+    }
+
+    &--add {
+      margin-bottom: 57px;
     }
   }
 }
@@ -55,6 +65,14 @@
   .title {
     &--maxi {
       margin-top: 75px;
+    }
+
+    &--form {
+      margin-bottom: 72px;
+    }
+
+    &--add {
+      margin-bottom: 57px;
     }
   }
 }

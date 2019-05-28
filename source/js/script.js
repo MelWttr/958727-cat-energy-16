@@ -12,3 +12,16 @@ navToggle.addEventListener("click", function () {
     nav.classList.remove("navigation--opened");
   }
 });
+
+function initMap() {
+  var spot = { lat: 59.9387165, lng: 30.3208587 };
+  var map = new google.maps.Map(
+    document.getElementById('map'), { zoom: 14, center: spot });
+  var image = "./img/map-pin.png";
+  var marker = new google.maps.Marker({
+
+    position: spot,
+    map: map,
+    icon: image
+  });
+}

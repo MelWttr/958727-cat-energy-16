@@ -80,9 +80,9 @@
             </label>
           </fieldset>
         </div>
-        <fieldset class="form__item form__item--owner">
-          <div class="form__container">
-            <legend class="title title--form">Контактные данные (владельца кота)</legend>
+        <div class="form__container">
+          <fieldset class="form__item form__item--owner">
+            <legend class="title title--form title--br">Контактные данные (владельца кота)</legend>
             <div class="form__profile form__profile--owner">
               <label class="form__label form__label--mail">E-mail:*<input type="email" class="form__field"
                   placeholder="kuklachev@gmail.com" required>
@@ -97,19 +97,20 @@
                 </svg>
               </label>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="form__item form__item--comment">
-          <div class="form__container">
+          </fieldset>
+        </div>
+        <div class="form__container">
+          <fieldset class="form__item form__item--comment">
             <legend class="title title--form">Комментарий</legend>
             <label class="form__label form__label--message">
               <textarea class="form__field form__field--message" cols="30" rows="6"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
-        </fieldset>
-        <fieldset class="form__item">
-          <div class="form__container">
-            <legend class="title title--form">Дополнительно</legend>
+          </fieldset>
+        </div>
+        <div class="form__container">
+          <fieldset class="form__item">
+            <legend class="title title--form title--add">Дополнительно</legend>
             <ul class="check">
               <li class="check__item">
                 <label class="check__label" for="checkbox-1">
@@ -140,13 +141,12 @@
                 </label>
               </li>
             </ul>
-          </div>
-      </div>
-      </fieldset>
-      <div class="form__submition">
-        <button class="button button--green" type="submit">Отправить зявку</button>
-        <p class="form__warning"><sup>*</sup>— Обязательные поля</p>
-      </div>
+          </fieldset>
+        </div>
+        <div class="form__submition">
+          <button class="button button--green" type="submit">Отправить зявку</button>
+          <p class="form__warning"><sup>*</sup>— Обязательные поля</p>
+        </div>
       </div>
     </form>
     <section class="contacts">
@@ -200,6 +200,9 @@
       </div>
     </div>
   </footer>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGVXWYY2m2TeIj8YyUti9zJgliBZo77Zg&callback=initMap">
+    </script>
   <script src="js/script.js"></script>
 </body>
 

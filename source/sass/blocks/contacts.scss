@@ -39,7 +39,6 @@
 
   margin: 0 auto;
   min-width: $mobile-width;
-  height: 360px;
 
   background: url("../img/bg-map-mobile@1x.png") no-repeat #f9f7f1;
   background-position: center;
@@ -47,7 +46,7 @@
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
-    background-size: 320px 360px;
+    background-size: 320px 400px;
   }
 
   &::before {

@@ -3,13 +3,14 @@
   min-width: $mobile-width;
 }
 
-// .form__title {
-//   display: flex;
-//   align-items: flex-start;
-//   margin-left: -$mobile-padding;
-//   padding-bottom: 20px;
-//   max-width: 222px;
-// }
+.form__container {
+  position: relative;
+
+  &::before {
+    @include green-border;
+    width: 90%;
+  }
+}
 
 .form__text {
   @include title-small(14px, 1.29, $darkest);
@@ -20,7 +21,6 @@
 }
 
 .form__item {
-  position: relative;
   padding: 0 $mobile-padding;
 
   border: none;
@@ -39,11 +39,6 @@
 
     border-top: 1px solid rgba($color: $border-color, $alpha: 0.5);
     border-bottom: 1px solid rgba($color: $border-color, $alpha: 0.5);
-  }
-
-  &:not(.form__item--type):not(.form__item--data)::before {
-    @include green-border;
-    width: 50%;
   }
 }
 
@@ -79,7 +74,7 @@
 }
 
 .form__field {
-  flex-grow: 1;
+  flex-grow: 2;
   margin-left: 15px;
   padding: 14px;
 
@@ -135,13 +130,19 @@
 }
 
 .form__warning {
-  margin: 20px 0 34px;
+  margin: 20px 0 26px;
   padding: 0 $mobile-padding;
 
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
+  .form__container {
+    &::before {
+      width: 100%;
+    }
+  }
+
   .form__text {
     margin: 55px 0 0;
     padding: 0 70px;
@@ -193,12 +194,6 @@
     right: 55px;
   }
 
-  // .form__title {
-  //   margin: 0;
-  //   padding-bottom: 70px;
-  //   max-width: 100%;
-  // }
-
   .form__field {
     &::placeholder {
       font-size: 20px;
@@ -238,23 +233,23 @@
 
   .form__profile {
     @include desktop-wrapper;
+    margin-top: 50px;
 
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
 
     &--owner {
       padding: 0;
+      margin-top: 0;
+      margin-bottom: 50px;
     }
   }
 
-  // .form__title {
-  //   @include desktop-wrapper;
-  //   margin-bottom: 70px;
-  //   padding: 0;
-  // }
-
   .form__item {
+    max-width: 1300px;
+    margin: 0 auto;
+
     &--data {
       flex-grow: 1;
       padding: 0;
@@ -277,21 +272,17 @@
     }
   }
 
-  .form__field {
-    &--message {
-      margin-top: 20px;
-    }
-  }
-
   .form__label {
     &--phone,
     &--mail {
       width: 50%;
       padding: 0 40px;
+      margin: 0;
     }
 
     &--message {
       @include desktop-wrapper;
+      margin-bottom: 53px;
     }
   }
 

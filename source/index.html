@@ -68,7 +68,7 @@
             alt="банка с кошачьей едой">
         </picture>
       </figure>
-      <a href="#" class="button button--green">Подобрать программу</a>
+      <a href="form.html" class="button button--green">Подобрать программу</a>
     </div>
 
     <section class="programs">
@@ -87,7 +87,7 @@
               Slim
               поможет вашему питомцу сбросить лишний вес.
             </p>
-            <a href="#" class="programs__link">Каталог Slim</a>
+            <a href="slim.html" class="programs__link">Каталог Slim</a>
           </li>
           <li class="programs__item">
             <div class="programs__icon">
@@ -98,7 +98,7 @@
             <h3 class="programs__title">Набор масссы</h3>
             <p class="programs__text programs__text--gain">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a href="#" class="programs__link">Каталог pro</a>
+            <a href="gain.html" class="programs__link">Каталог pro</a>
           </li>
         </ul>
       </div>
@@ -250,24 +250,9 @@
       </div>
     </div>
   </footer>
-  <script>
-    function initMap() {
-      var spot = { lat: 59.9387165, lng: 30.3208587 };
-      var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 14, center: spot });
-      var image = "./img/map-pin.png";
-      var marker = new google.maps.Marker({
-
-        position: spot,
-        map: map,
-        icon: image
-      });
-    }
-  </script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGVXWYY2m2TeIj8YyUti9zJgliBZo77Zg&callback=initMap">
     </script>
-
   <script src="js/script.js"></script>
 </body>
 
