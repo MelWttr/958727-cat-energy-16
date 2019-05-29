@@ -96,11 +96,6 @@
 
 @media (min-width: $desktop-width) {
   .radiobutton {
-    margin-top: 32px;
-
-    &:last-of-type {
-      margin-bottom: 40px;
-      padding-bottom: 0;
-    }
+    padding-top: 2px;
   }
 }
