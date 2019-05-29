@@ -14,7 +14,7 @@
 
 .form__text {
   @include title-small(14px, 1.29, $darkest);
-  margin-bottom: 30px;
+  margin: 24px 0 30px;
   padding: 0 $mobile-padding;
 
   text-align: left;
@@ -26,7 +26,11 @@
   border: none;
 
   &--data {
-    padding-bottom: 23px;
+    padding: 0 17px 23px;
+  }
+
+  &--owner {
+    padding: 0 15px;
   }
 
   &--type {
@@ -112,27 +116,32 @@
 
   &--message {
     margin-left: 0;
-    padding: 15px 11px;
+    padding: 12px 11px 15px;
     width: 100%;
     min-height: 150px;
   }
 
   &--message:active,
   &--message:focus {
-    padding: 14px 10px;
+    padding: 11px 10px 14px;
   }
 }
 
 .form .button {
   width: 280px;
-  margin: 33px auto 0;
+  margin: 32px auto 0;
+
+  font-size: 16px;
+  line-height: 1.25px;
+
   border: none;
 }
 
 .form__warning {
-  margin: 20px 0 26px;
+  margin: 20px 0 30px;
   padding: 0 $mobile-padding;
 
+  font-family: "Arial", sans-serif;
   text-align: center;
 }
 
@@ -154,22 +163,26 @@
 
   .form__item {
     margin-top: 55px;
-    padding: 0 30px;
+    padding: 0px 23px 0 27px;
 
     &--data {
       margin-top: 50px;
-      padding: 0 70px;
+      padding: 0 67px 0 70px;
     }
 
     &--type {
-      margin: 70px 70px 0 70px;
-      padding: 12px 28px 25px;
+      margin: 75px 70px 0;
+      padding: 0px 28px 34px;
 
       border: 1px solid rgba($color: $border-color, $alpha: 0.5);
     }
 
     &--comment {
       margin-top: 45px;
+    }
+
+    &--add {
+      padding: 0 10px 0 27px;
     }
   }
 
@@ -191,10 +204,31 @@
   }
 
   .form__icon {
-    right: 55px;
+    right: 20px;
   }
 
   .form__field {
+    padding-left: 17px;
+
+    &--mail {
+      padding-left: 25px;
+    }
+
+    &:active,
+    &:focus {
+      padding-left: 16px;
+    }
+
+    &:invalid {
+      padding-left: 17px;
+    }
+
+    &--mail:invalid,
+    &--mail:active,
+    &--mail:focus  {
+      padding-left: 24px;
+    }
+
     &::placeholder {
       font-size: 20px;
       line-height: 1;
@@ -206,12 +240,15 @@
     flex-wrap: nowrap;
     align-items: center;
 
-    padding: 15px 40px 70px;
+    padding: 13px 30px 72px 30px;
   }
 
   .form .button {
-    margin: 0 40px;
+    margin: 0px 32px 0 41px;
     width: 50%;
+
+    font-size: 20px;
+    line-height: 1;
   }
 
   .form__warning {

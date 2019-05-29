@@ -74,14 +74,11 @@
 @media (min-width: $tablet-width) {
   .radiobutton {
     margin-top: 30px;
+    padding-top: 3px;
     padding-left: 60px;
 
     font-size: 20px;
     line-height: 1;
-
-    &:last-of-type {
-      padding-bottom: 10px;
-    }
   }
 
   .radiobutton__icon {

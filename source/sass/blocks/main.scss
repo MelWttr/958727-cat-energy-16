@@ -35,6 +35,10 @@
   margin: 0 auto;
   min-width: $mobile-width;
   padding: 18px $mobile-padding 0;
+
+  &--form {
+    padding-top: 16px;
+  }
 }
 
 .main__title {
