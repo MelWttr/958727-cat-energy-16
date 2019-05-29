@@ -8,6 +8,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .cards {
+    margin-top: 30px;
+  }
+
   .cards__wrapper {
     padding: 0 $tablet-padding;
     display: flex;
@@ -17,6 +21,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .cards {
+    margin-top: 25px;
+  }
+
   .cards__wrapper {
     width: 1300px;
     padding: 0 $desktop-padding;

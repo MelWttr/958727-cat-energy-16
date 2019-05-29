@@ -9,6 +9,7 @@
 
   &--more {
     flex-direction: column;
+    padding-bottom: 2px;
 
     border-bottom: 1px solid  $gray;
   }
@@ -22,16 +23,21 @@
   }
 }
 
+.card--extra .card__text {
+  font-size: 14px;
+  line-height: 1;
+}
+
 .card__title {
   @include title-small(16px, 1.25, $darkest);
-  padding-right: 40%;
+  padding: 3px 40% 0 0;
 
   &--more {
     padding: 0;
   }
 
   &--extra {
-    margin-top: 12px;
+    margin-top: 7px;
   }
 }
 
@@ -52,17 +58,25 @@
 }
 
 .card--extra .button {
-  margin-top: 7px;
+  margin: 12px 0 18px;
 }
 
 
 .card__table {
-  margin-top: 10px;
+  margin-top: 6px;
   width: 100%;
 }
 
 .card__table th {
   text-align: left;
+}
+
+.card__table--extra th {
+  padding-top: 4px;
+}
+
+.card__table--extra td {
+  padding-top: 4px;
 }
 
 .card__table td {
@@ -106,7 +120,7 @@
 @media (min-width: $tablet-width) {
   .card {
     margin-top: 135px;
-    padding: 0 0 40px;
+    padding: 0 0 43px;
     width: 324px;
 
     background-color: $gray;
@@ -117,8 +131,9 @@
     }
 
     &--extra {
+      align-items: baseline;
       margin: 0;
-      padding: 20px $tablet-padding 26px;
+      padding: 23px 36px 29px;
       width: 100%;
 
       background-color: transparent;
@@ -127,7 +142,7 @@
     }
 
     &--extra:first-of-type {
-      margin-top: 65px;
+      margin-top: 80px;
 
       border-top: 1px solid $border-color;
     }
@@ -135,7 +150,7 @@
 
   .card__info {
     margin: 0 auto;
-    padding: 0 $tablet-padding;
+    padding: 0 33px;
     width: 100%;
   }
 
@@ -148,11 +163,17 @@
     }
 
     &--extra .card__text {
+      padding: 0;
+
+      font-size: 16px;
+      line-height: 1.25;
+
       border: none;
     }
 
     &--extra th {
       margin-right: 52px;
+      padding-top: 14px 0 0 0;
     }
   }
 
@@ -167,25 +188,25 @@
   }
 
   .card--extra .button {
-    margin-top: 15px;
+    margin-top: 18px;
     width: 100%;
   }
 
   .card__image {
     width: 324px;
     height: 172px;
-    margin-top: -35px;
+    margin-top: -47px;
 
     background-color: transparent;
   }
 
   .card:nth-child(even) .card__image {
     height: 208px;
-    margin-top: -70px;
+    margin-top: -81px;
   }
 
   .card__title {
-    margin-top: 25px;
+    margin-top: 31px;
     padding: 0 20%;
     text-align: center;
 
@@ -216,7 +237,7 @@
 
     &--more {
       margin: 0;
-      margin-bottom: 35px;
+      margin: 0 0 29px;
       padding: 0;
       width: 170px;
 
@@ -238,6 +259,12 @@
 @media (min-width: $desktop-width) {
   .card {
     width: 245px;
+    padding: 0px 0 39px;
+
+    &:not(.card--extra) {
+      margin-top: 138px;
+      margin-bottom: 4px;
+    }
 
     &--extra {
       justify-content: space-between;
@@ -248,10 +275,18 @@
       border-left: none;
       border-right: none;
     }
+
+    &--extra:first-of-type {
+      margin-top: 77px;
+    }
   }
 
   .card__image {
     width: 245px;
+  }
+
+  .card__info {
+    padding: 0px 35px;
   }
 
   .card__title {
@@ -271,7 +306,7 @@
 
   .card__table {
     &--extra {
-      width: 285px;
+      width: 294px;
     }
   }
 
