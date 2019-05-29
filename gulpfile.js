@@ -32,6 +32,17 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
+});
+
+gulp.task("css-min", function () {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename("style_min.css"))
     .pipe(sourcemap.write("."))
@@ -141,6 +152,7 @@ gulp.task("build", gulp.series(
   "clear",
   "copy",
   "css",
+  "css-min",
   "sprite-icons",
   "html",
   "js"
