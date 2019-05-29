@@ -86,7 +86,7 @@
 .card__text {
   margin: 0;
 
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -236,7 +236,6 @@
     border-bottom: 1px solid $border-color;
 
     &--more {
-      margin: 0;
       margin: 0 0 29px;
       padding: 0;
       width: 170px;
@@ -259,7 +258,7 @@
 @media (min-width: $desktop-width) {
   .card {
     width: 245px;
-    padding: 0px 0 39px;
+    padding: 0 0 39px;
 
     &:not(.card--extra) {
       margin-top: 138px;
@@ -286,7 +285,7 @@
   }
 
   .card__info {
-    padding: 0px 35px;
+    padding: 0 35px;
   }
 
   .card__title {

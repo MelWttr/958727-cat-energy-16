@@ -70,7 +70,7 @@
   margin: 0;
   padding: 24px 0 22px;
 
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.29;
 
   border-bottom: 1px solid $border-color;
@@ -249,10 +249,10 @@
   .programs__link {
     margin-top: 5px;
     padding-right: 49px;
+
     &:hover,
     &:active {
       padding-right: (49px + 9px);
     }
-
   }
 }

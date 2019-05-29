@@ -7,7 +7,7 @@
 .about__list {
   @include list-reducer;
 
-    padding: 30px 0 22px;
+  padding: 30px 0 22px;
 }
 
 .about__item {
@@ -61,7 +61,7 @@
 .about__text {
   margin: 0 0 6px;
 
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.29;
 }
 
@@ -118,7 +118,7 @@
 
       position: absolute;
       top: 0;
-      right: 0px;
+      right: 0;
       z-index: -2;
 
       font-size: 281px;
