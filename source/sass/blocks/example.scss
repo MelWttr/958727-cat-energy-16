@@ -40,7 +40,7 @@
   position: absolute;
   top: 10px;
 
-  padding: 17px 0;
+  padding: 11px 0 19px;
   width: 125px;
 
   text-align: center;
@@ -60,23 +60,24 @@
 
 .example__description {
   position: absolute;
-  top: 60px;
-  width: 90px;
+  top: 55px;
+  width: 80px;
 
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 1;
+  font-weight: 400;
   text-align: center;
   color: $brown;
 
   background-color: $gray;
 
   &:first-of-type {
-    left: 19px;
+    left: 23px;
   }
 
   &:nth-of-type(2) {
-    right: 17px;
+    right: 22px;
   }
 }
 

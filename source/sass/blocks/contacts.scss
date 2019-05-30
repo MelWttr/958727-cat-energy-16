@@ -81,7 +81,7 @@
     width: 155px;
 
     &--bold {
-      padding-bottom: 5px;
+      padding: 0;
 
       font-size: 20px;
       line-height: 1.25;
@@ -96,6 +96,10 @@
       line-height: 1.25;
       text-align: right;
     }
+  }
+
+  .contacts__text--address {
+    margin-top: -4px;
   }
 
   .contacts__map {
